@@ -1,0 +1,23 @@
+@font-face {
+  font-family: MarkaziText;
+  src: url('./MarkaziText-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: MarkaziText;
+  src: url('./MarkaziText-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: MarkaziText;
+  src: url('./MarkaziText-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: MarkaziText;
+  src: url('./MarkaziText-Bold.ttf');
+  font-weight: 700;
+}

@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import '../../public/fonts/MarkaziText/MarkaziText.css';
+@import '../../public/fonts/Vazirmatn/Vazirmatn.css';
+
+@theme {
+  /* Colors */
+  --color-primary: #7fa69b;
+  --color-black: #2e3231;
+  --color-gray: #d5d6d6;
+  --color-paragraph: #535956;
+
+  /* fonts */
+  --font-primary: VazirMatn, MarkaziText;
+  --font-secondary: MarkaziText, VazirMatn;
+}
+
+@utility container {
+  @apply mx-auto w-[90%] max-w-360;
+}
