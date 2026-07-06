@@ -26,7 +26,7 @@ export default function Home() {
         end: `bottom ${window.innerWidth <= 768 ? '150' : 'top'}`,
         scrub: true,
         pin: true,
-        markers: true,
+        markers: false,
       },
     });
 
@@ -56,11 +56,11 @@ export default function Home() {
             ref={textContainer}
             className="flex h-screen max-h-210 items-center justify-center text-white md:max-h-200"
           >
-            <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-20 lg:pt-40 xl:gap-0!">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-20 lg:pt-40 xl:gap-0!">
               <p className="font-secondary text-6xl leading-tight min-[480px]:text-7xl min-[1200px]:text-8xl! min-[1440px]:text-[110px]! lg:w-[50%] lg:text-[85px]">
                 هر تغییر بزرگی، <br className="hidden lg:block" /> از یک قدم آغاز میشود.
               </p>
-              <div className="space-y-10 lg:flex lg:w-[50%] lg:max-w-107.5 lg:flex-col xl:max-w-125!">
+              <div className="space-y-8 lg:flex lg:w-[50%] lg:max-w-107.5 lg:flex-col xl:max-w-125!">
                 <p className="leading-loose">
                   در اینجا، با ارائه خدمات روان‌درمانی و مشاوره، همراه شما هستیم تا با آرامش و
                   اطمینان بیشتری با چالش‌های زندگی روبه‌رو شوید. در کنار هم، شناخت عمیق‌تری از خود
