@@ -54,7 +54,7 @@ export default function Home() {
         <div className="absolute inset-0 z-2 container">
           <div
             ref={textContainer}
-            className="flex h-svh max-h-210 items-center justify-center text-white md:max-h-200"
+            className="flex h-vh max-h-210 items-center justify-center text-white md:max-h-200"
           >
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-20 lg:pt-40 xl:gap-0!">
               <p className="font-secondary text-6xl leading-tight min-[480px]:text-7xl min-[1200px]:text-8xl! min-[1440px]:text-[110px]! lg:w-[50%] lg:text-[85px]">
@@ -74,7 +74,7 @@ export default function Home() {
 
           <div
             ref={toggleContainer}
-            className="flex h-svh items-center justify-center pt-10 text-center md:max-h-180 md:pt-0"
+            className="flex h-vh items-center justify-center pt-10 text-center md:max-h-180 md:pt-0"
           >
             <div className="relative z-5 flex flex-col items-center gap-6 pt-30">
               <label className="flex items-center gap-5">
@@ -111,16 +111,16 @@ export default function Home() {
           </svg>
         </div>
         <div
-          className="relative flex h-svh max-h-225 max-w-full items-end justify-center"
+          className="relative flex h-vh max-h-225 max-w-full items-end justify-center"
           ref={imgContainerRef}
         >
           <div
             ref={img1}
-            className="absolute inset-0 z-1 flex h-svh w-full items-center justify-between bg-[url(/images/banner.jpg)] bg-cover bg-top bg-no-repeat"
+            className="absolute inset-0 z-1 flex h-vh w-full items-center justify-between bg-[url(/images/banner.jpg)] bg-cover bg-top bg-no-repeat"
           ></div>
           <div
             ref={img2}
-            className="absolute inset-0 h-svh w-full bg-[url(/images/banner-2.jpg)] bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 h-vh w-full bg-[url(/images/banner-2.jpg)] bg-cover bg-center bg-no-repeat"
           ></div>
         </div>
       </div>
