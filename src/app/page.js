@@ -23,10 +23,10 @@ export default function Home() {
       scrollTrigger: {
         trigger: imgContainerRef.current,
         start: 'top top',
-        end: 'bottom top',
+        end: `bottom ${window.innerWidth <= 768 ? '150' : 'top'}`,
         scrub: true,
         pin: true,
-        markers: false,
+        markers: true,
       },
     });
 
@@ -74,9 +74,9 @@ export default function Home() {
 
           <div
             ref={toggleContainer}
-            className="flex h-screen items-center justify-center pt-10 text-center md:max-h-180 md:pt-0"
+            className="flex h-[65dvh] items-center justify-center text-center md:h-screen md:max-h-180 md:pt-0"
           >
-            <div className="relative z-5 flex flex-col items-center gap-6 pt-30">
+            <div className="relative z-5 flex flex-col items-center gap-6 md:pt-30">
               <label className="flex items-center gap-5">
                 <p className="text-white">تعادل</p>
                 <Checkbox />
