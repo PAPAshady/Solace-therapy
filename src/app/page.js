@@ -2,13 +2,12 @@
 import { useRef } from 'react';
 
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import Checkbox from '@modules/Checkbox/Checkbox';
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(useGSAP);
 
 export default function Home() {
   const imgContainerRef = useRef(null);
@@ -27,7 +26,7 @@ export default function Home() {
         end: `bottom ${window.innerWidth > 767 || window.innerHeight > 900 ? 'top' : '180'}`,
         scrub: true,
         pin: true,
-        markers: true,
+        markers: false,
       },
     });
 
