@@ -34,7 +34,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: toggleSwitchContainer.current,
           start: 'top bottom',
-          end: 'center center',
+          end: 'center center-=100',
           scrub: true,
           markers: false,
         },
@@ -42,12 +42,12 @@ export default function Home() {
 
       // draw the line as user scrolls and fade it away at the end.
       lineTl
-        .to('#line', {
+        .to(['#line-1', '#line-2'], {
           strokeDashoffset: 0,
           ease: 'none',
           duration: 1,
         })
-        .to('#line', { opacity: 0 }, 0.9);
+        .to(['#line-1', '#line-2'], { opacity: 0 }, 0.9);
 
       // calculate the height of line contianer dynamically so the tip of the line always end at top of the toggle button section. no matter what is the viewport height.
       const textContainerHeight = bannerTextContainer.current.scrollHeight;
@@ -103,6 +103,25 @@ export default function Home() {
       </div>
       <div id="lineContainer" className="absolute z-1 hidden w-full items-start md:flex">
         <svg
+          className="absolute"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          viewBox="0 0 780 1140"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            className="stroke-white/60"
+            d="M 568.5 0 C -446.766 669.726 420.757 754.867 688 543.5 C 955.243 332.133 149.225 460.324 381 1140"
+            stroke="var(--token-15d296e7-c5d1-416d-add7-be3f4225afa3, rgb(255, 255, 255))"
+            strokeWidth="2"
+            fill="transparent"
+            style={{ strokeDasharray: '2420.39px', strokeDashoffset: '1900px' }}
+            id="line-2"
+          ></path>
+        </svg>
+        <svg
+          className="absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
           height="100%"
@@ -115,7 +134,7 @@ export default function Home() {
             strokeWidth="2"
             fill="transparent"
             style={{ strokeDasharray: '2420.39px', strokeDashoffset: '1900px' }}
-            id="line"
+            id="line-1"
           ></path>
         </svg>
       </div>
