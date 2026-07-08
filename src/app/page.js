@@ -16,7 +16,7 @@ export default function Home() {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
+      const imgTl = gsap.timeline({
         scrollTrigger: {
           trigger: '#imgContainer',
           start: 'top top',
@@ -28,21 +28,26 @@ export default function Home() {
       });
 
       // cross-fade images as user scrolss
-      tl.to('#img1', { opacity: 0, duration: 1 });
+      imgTl.to('#img1', { opacity: 0, duration: 1 });
 
-      // draw the line as user scrolls
-      gsap.to('#line', {
-        strokeDashoffset: 0,
-        ease: 'none',
-        duration: 1,
+      const lineTl = gsap.timeline({
         scrollTrigger: {
           trigger: toggleSwitchContainer.current,
           start: 'top bottom',
           end: 'center center',
           scrub: true,
-          markers: false,
+          markers: true,
         },
       });
+
+      // draw the line as user scrolls and fade it away at the end.
+      lineTl
+        .to('#line', {
+          strokeDashoffset: 0,
+          ease: 'none',
+          duration: 1,
+        })
+        .to('#line', { opacity: 0 }, 0.9);
 
       // calculate the height of line contianer dynamically so the tip of the line always end at top of the toggle button section. no matter what is the viewport height.
       const textContainerHeight = bannerTextContainer.current.scrollHeight;
