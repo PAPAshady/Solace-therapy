@@ -23,7 +23,7 @@ export default function Home() {
           end: `bottom ${window.innerWidth > 767 || window.innerHeight > 900 ? 'top' : '180'}`,
           scrub: true,
           pin: true,
-          markers: true,
+          markers: false,
         },
       });
 
@@ -32,6 +32,21 @@ export default function Home() {
         .to('#img1', { opacity: 0, duration: 1 })
         .to(bannerTextContainer.current, { y: -100 }, 0.6)
         .to(toggleSwitchContainer.current, { y: 20 });
+
+      const toggleSwitchTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#switchWrapper',
+          start: 'center center',
+          end: 'center center',
+          markers: false,
+          toggleActions: 'play none reverse none',
+        },
+      });
+
+      toggleSwitchTl
+        .to('#switchLabel', { x: -26, opacity: 1 })
+        .to('#switchButton', { x: 10, opacity: 1 }, 0)
+        .to('#fakeSwitchHandle', { x: -63 }, 0);
 
       const lineTl = gsap.timeline({
         scrollTrigger: {
@@ -56,7 +71,7 @@ export default function Home() {
       const textContainerHeight = bannerTextContainer.current.scrollHeight;
       const toggleContainerHeight = toggleSwitchContainer.current.scrollHeight;
       gsap.set('#lineContainer', {
-        height: textContainerHeight + toggleContainerHeight / 2 - 160,
+        height: textContainerHeight + toggleContainerHeight / 2 - 130,
       });
     },
     { scope: container }
@@ -89,9 +104,17 @@ export default function Home() {
           className="flex items-center justify-center text-center md:h-screen md:max-h-180"
         >
           <div className="relative z-5 flex flex-col items-center gap-6 pt-20 md:p-0">
-            <label className="flex items-center gap-5">
-              <p className="text-white">تعادل</p>
-              <Checkbox />
+            <label id="switchWrapper" className="flex items-center gap-5">
+              <p id="switchLabel" className="-translate-x-14 text-white opacity-0">
+                تعادل
+              </p>
+              <div
+                className="size-6 -translate-x-1.5 rounded-full bg-white"
+                id="fakeSwitchHandle"
+              ></div>
+              <div id="switchButton" className="translate-x-16.5 opacity-0">
+                <Checkbox />
+              </div>
             </label>
             <p className="text-4xl leading-relaxed text-white lg:text-[42px]">
               کاش پیدا کردن تعادل <br className="hidden sm:block" />
