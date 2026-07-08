@@ -17,3 +17,7 @@
 @utility container {
   @apply mx-auto w-[90%] max-w-360;
 }
+
+::selection {
+  background: #91bdb0;
+}

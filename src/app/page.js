@@ -23,12 +23,15 @@ export default function Home() {
           end: `bottom ${window.innerWidth > 767 || window.innerHeight > 900 ? 'top' : '180'}`,
           scrub: true,
           pin: true,
-          markers: false,
+          markers: true,
         },
       });
 
       // cross-fade images as user scrolss
-      imgTl.to('#img1', { opacity: 0, duration: 1 });
+      imgTl
+        .to('#img1', { opacity: 0, duration: 1 })
+        .to(bannerTextContainer.current, { y: -100 }, 0.6)
+        .to(toggleSwitchContainer.current, { y: 20 });
 
       const lineTl = gsap.timeline({
         scrollTrigger: {
