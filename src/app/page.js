@@ -24,10 +24,10 @@ export default function Home() {
       scrollTrigger: {
         trigger: imgContainerRef.current,
         start: 'top top',
-        end: `bottom ${window.innerWidth < 767 ? '180' : 'top'}`,
+        end: `bottom ${window.innerWidth > 767 || window.innerHeight > 900 ? 'top' : '180'}`,
         scrub: true,
         pin: true,
-        markers: false,
+        markers: true,
       },
     });
 
