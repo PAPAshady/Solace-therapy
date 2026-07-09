@@ -173,7 +173,7 @@ export default function Home() {
           ></div>
           <div
             id="img2"
-            className="absolute inset-0 size-full w-full bg-[url(/images/banner-2.jpg)] bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 h-screen w-full bg-[url(/images/banner-2.jpg)] bg-cover bg-center bg-no-repeat"
           >
             <div
               id="whiteBackground"
