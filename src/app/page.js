@@ -22,7 +22,7 @@ export default function Home() {
   const onCheckedChange = (checked) => {
     setIsChecked(checked);
     gsap.to(window, {
-      scrollTo: checked ? toggleTrigger.current.end : toggleTrigger.current.start,
+      scrollTo: checked ? toggleTrigger.current.end + 5 : toggleTrigger.current.start,
       duration: 0.5,
       ease: 'circ.inOut',
     });
@@ -206,7 +206,7 @@ export default function Home() {
               ref={toggleSwitchContainer}
               className="flex items-center justify-center text-center md:h-screen md:max-h-180"
             >
-              <div>
+              <div className="w-full">
                 <div className="z-5 flex flex-col items-center gap-6 pt-20 md:p-0">
                   <label id="switchWrapper" className="flex items-center gap-5">
                     <p
@@ -230,7 +230,7 @@ export default function Home() {
                       />
                     </div>
                   </label>
-                  <div className="relative min-h-67.5">
+                  <div className="relative min-h-67.5 w-full">
                     <div id="firstText" className="space-y-6">
                       <p className="text-4xl leading-relaxed text-white lg:text-[42px]">
                         کاش پیدا کردن آرامش <br className="hidden sm:block" />
@@ -243,11 +243,11 @@ export default function Home() {
                     </div>
                     <div
                       id="secondText"
-                      className="absolute top-0 left-1/2 w-full -translate-x-1/2 space-y-6 opacity-0"
+                      className="absolute top-0 left-1/2 w-full -translate-x-1/2 space-y-6 text-center opacity-0"
                     >
                       <p className="text-4xl leading-relaxed text-black sm:whitespace-nowrap lg:text-[42px]">
-                        شاید کلیدی در کار نباشد، <br className="hidden sm:block" />
-                        <span className="text-primary">اما مسیر مشخصی وجود دارد.</span>
+                        شاید کلیدی در کار نباشد، <br className="hidden min-[391px]:block" />
+                        <span className="min-[391px]:text-primary">اما مسیر مشخصی وجود دارد.</span>
                       </p>
                       <p className="text-paragraph">
                         مسیر هر فرد متفاوت است. ما با خدمات زیر کمک میکنیم{' '}
