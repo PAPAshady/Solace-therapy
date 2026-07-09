@@ -77,7 +77,8 @@ export default function Home() {
         scrollTrigger: {
           trigger: '#toggleSwitchWrapper',
           start: 'center center',
-          end: `${window.innerWidth <= 768 ? 'bottom+=170' : 'bottom+=100'} center`,
+          end: `bottom-=440 center`,
+          endTrigger: container.current,
           pin: true,
           markers: true,
           onLeave: () => {
@@ -165,7 +166,7 @@ export default function Home() {
         </div>
         <div
           id="imgContainer"
-          className="relative flex h-[130vh] max-h-300 max-w-full items-end justify-center"
+          className="relative flex h-[130vh] max-h-320 max-w-full items-end justify-center"
         >
           <div
             id="img1"
