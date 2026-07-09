@@ -80,7 +80,7 @@ export default function Home() {
           end: `bottom-=440 center`,
           endTrigger: container.current,
           pin: true,
-          markers: true,
+          markers: false,
           onLeave: () => {
             setIsChecked(true);
             toggleTl.play();
