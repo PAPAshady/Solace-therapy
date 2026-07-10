@@ -4,7 +4,7 @@ import { services } from '@/data';
 
 export default function Services() {
   return (
-    <div className="container pb-10">
+    <div className="container pt-10 sm:p-0">
       <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 xl:grid-cols-4!">
         {services.map((service) => (
           <div

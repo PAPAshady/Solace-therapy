@@ -5,7 +5,7 @@ export default function page() {
   return (
     <>
       <Banner />
-      <div>
+      <div className="pb-16">
         <Services />
       </div>
     </>

@@ -74,23 +74,29 @@ export default function Banner() {
         .to('#secondText', { opacity: 1 });
 
       // toggle checkbox and controll section animation for the bottom section of banner
+      let hasPlayed = false;
       const bottomSectionTl = gsap.timeline({
         scrollTrigger: {
           trigger: '#toggleSwitchWrapper',
           start: 'center center',
-          end: `bottom-=440 center`,
+          end: `bottom-=13% center`,
           endTrigger: container.current,
           pin: true,
           markers: false,
-          onLeave: () => {
-            setIsChecked(true);
-            toggleTl.play();
-            setTheme('dark');
-          },
-          onEnterBack: () => {
-            setIsChecked(false);
-            toggleTl.reverse();
-            setTheme('light');
+          onUpdate: (self) => {
+            if (self.progress >= 0.7 && !hasPlayed) {
+              hasPlayed = true;
+              setIsChecked(true);
+              toggleTl.play();
+              setTheme('dark');
+              return;
+            }
+            if (self.progress < 0.7 && hasPlayed) {
+              hasPlayed = false;
+              setIsChecked(false);
+              toggleTl.reverse();
+              setTheme('light');
+            }
           },
         },
       });
