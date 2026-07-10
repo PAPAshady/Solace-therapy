@@ -13,8 +13,8 @@ export default function Services() {
   useGSAP(
     () => {
       const cards = gsap.utils.toArray('#serviceCard', container.current);
-      const MIN_HEIGHT = 400;
-      const MAX_HEIGHT = 520;
+      const MIN_HEIGHT = 450;
+      const MAX_HEIGHT = 550;
       const MAX_DISTANCE = container.current.clientWidth;
 
       const setters = cards.map((card) =>
@@ -56,7 +56,7 @@ export default function Services() {
 
   return (
     <div ref={container} className="container flex items-center pt-10 sm:p-0">
-      <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2 xl:h-130 xl:grid-cols-4!">
+      <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2 xl:h-137.5 xl:grid-cols-4!">
         {services.map(({ id, title, description, image }) => (
           <ServiceCard key={id} id={id} title={title} description={description} image={image} />
         ))}
