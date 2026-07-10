@@ -24,7 +24,7 @@ export default function Banner() {
     setIsChecked(checked);
     gsap.to(window, {
       scrollTo: checked ? toggleTrigger.current.end + 5 : toggleTrigger.current.start,
-      duration: 0.5,
+      duration: 0.7,
       ease: 'circ.inOut',
     });
   };
@@ -69,7 +69,7 @@ export default function Banner() {
       // timeline to control the background change (to white) when user reaches the end of banner (wether by togglig the checkbox or scrolling)
       const toggleTl = gsap.timeline({ paused: true });
       toggleTl
-        .to('#whiteBackground', { opacity: 1, duration: 0.5 }, '<')
+        .to('#whiteBackground', { opacity: 1, duration: 0.3 }, '<')
         .to('#firstText', { opacity: 0 }, '<')
         .to('#secondText', { opacity: 1 });
 
