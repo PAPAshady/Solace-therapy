@@ -8,6 +8,7 @@ import clsx from 'clsx';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import Checkbox from '@modules/Checkbox/Checkbox';
+import { setTheme } from '@/utils';
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
@@ -84,10 +85,12 @@ export default function Banner() {
           onLeave: () => {
             setIsChecked(true);
             toggleTl.play();
+            setTheme('dark');
           },
           onEnterBack: () => {
             setIsChecked(false);
             toggleTl.reverse();
+            setTheme('light');
           },
         },
       });
