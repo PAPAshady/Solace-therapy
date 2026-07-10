@@ -84,14 +84,14 @@ export default function Banner() {
           pin: true,
           markers: false,
           onUpdate: (self) => {
-            if (self.progress >= 0.7 && !hasPlayed) {
+            if (self.progress >= 0.65 && !hasPlayed) {
               hasPlayed = true;
               setIsChecked(true);
               toggleTl.play();
               setTheme('dark');
               return;
             }
-            if (self.progress < 0.7 && hasPlayed) {
+            if (self.progress < 0.65 && hasPlayed) {
               hasPlayed = false;
               setIsChecked(false);
               toggleTl.reverse();
