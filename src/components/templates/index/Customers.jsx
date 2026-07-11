@@ -1,26 +1,55 @@
+'use client';
 import Image from 'next/image';
+import { useRef } from 'react';
+
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 
 export default function Customers() {
+  const container = useRef(null);
+
+  useGSAP(
+    () => {
+      const images = gsap.utils.toArray('#img', container.current);
+      images.forEach((image) => {
+        gsap.to(image, {
+          yPercent: 23,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: image,
+            start: 'top bottom',
+            end: 'bottom center',
+            scrub: true,
+            markers: false,
+          },
+        });
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <div className="container md:pb-16">
+    <div className="container md:pb-16" ref={container}>
       <div className="space-y-8">
         <p className="text-primary font-bold">آدم های واقعی. تغییر واقعی</p>
         <div className="flex flex-col gap-8 md:flex-row-reverse lg:items-center">
           <div className="relative flex shrink-0 justify-end md:w-1/2">
-            <div className="absolute right-2 -bottom-16 hidden aspect-[.651338] w-1/2 md:block">
+            <div className="absolute right-2 -bottom-16 z-1 hidden aspect-[.651338] w-1/2 overflow-hidden md:flex md:items-end md:justify-center">
               <Image
-                className="size-full object-cover"
+                id="img"
+                className="size-[120%] max-w-none object-cover"
                 alt="Finding balance after burnout"
                 width={2048}
                 height={2048}
                 src="/images/customers/customer-2.jpg"
               />
             </div>
-            <div className="h-100 w-full md:aspect-[.651338] md:h-auto md:w-[60%]">
+            <div className="flex h-100 w-full items-end justify-center overflow-hidden md:aspect-[.651338] md:h-auto md:w-[60%]">
               <Image
-                className="size-full object-cover"
+                id="img"
+                className="size-[120%] max-w-none object-cover"
                 alt="Finding balance after burnout"
                 width={2048}
                 height={2048}
