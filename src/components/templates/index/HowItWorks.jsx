@@ -88,24 +88,24 @@ export default function HowItWorks() {
               <div className="relative flex flex-col items-center justify-center gap-10">
                 <span
                   id="num1"
-                  className="text-primary text-[240px] min-[990px]:text-[320px] lg:text-[320px] xl:text-[335px]"
+                  className="text-primary text-[240px] min-[990px]:text-[320px] lg:text-[320px] xl:text-[350px]"
                 >
                   {(1).toLocaleString('fa')}
                 </span>
                 <span
                   id="num2"
-                  className="text-primary absolute left-1.5 translate-y-[75%] text-[240px] opacity-0 min-[990px]:text-[320px] lg:text-[320px] xl:text-[335px]"
+                  className="text-primary absolute left-1.5 translate-y-[75%] text-[240px] opacity-0 min-[990px]:text-[320px] lg:text-[320px] xl:text-[350px]"
                 >
                   {(2).toLocaleString('fa')}
                 </span>
                 <span
                   id="num3"
-                  className="text-primary absolute left-1.5 translate-y-[75%] text-[240px] opacity-0 min-[990px]:text-[320px] lg:text-[320px] xl:text-[335px]"
+                  className="text-primary absolute left-1.5 translate-y-[75%] text-[240px] opacity-0 min-[990px]:text-[320px] lg:text-[320px] xl:text-[350px]"
                 >
                   {(3).toLocaleString('fa')}
                 </span>
               </div>
-              <span className="text-primary text-[240px] min-[990px]:text-[320px] lg:text-[320px] xl:text-[335px]">
+              <span className="text-primary text-[240px] min-[990px]:text-[320px] lg:text-[320px] xl:text-[350px]">
                 {(0).toLocaleString('fa')}
               </span>
             </div>
