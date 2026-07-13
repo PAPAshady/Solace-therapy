@@ -59,7 +59,7 @@ export default function HowItWorks() {
     <div className="relative container" ref={container}>
       <div
         id="line1"
-        className="fixed top-1/2 left-[200%] hidden size-[400%] -translate-1/2 items-center justify-center opacity-0 md:flex"
+        className="fixed top-1/2 left-[200%] -z-1 hidden size-[400%] -translate-1/2 items-center justify-center opacity-0 md:flex"
       >
         <svg viewBox="0 0 6000 680">
           <path
@@ -72,7 +72,7 @@ export default function HowItWorks() {
       </div>
       <div
         id="line2"
-        className="fixed top-1/2 left-[200%] hidden size-[400%] -translate-1/2 items-center justify-center opacity-0 md:flex"
+        className="fixed top-1/2 left-[200%] -z-1 hidden size-[400%] -translate-1/2 items-center justify-center opacity-0 md:flex"
       >
         <svg viewBox="0 0 6000 680" id="svg9185786404">
           <path
