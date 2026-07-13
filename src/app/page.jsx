@@ -3,6 +3,7 @@ import Services from '@templates/index/Services';
 import AboutUs from '@templates/index/AboutUs';
 import Customers from '@templates/index/Customers';
 import HowItWorks from '@templates/index/HowItWorks';
+import Plans from '@templates/index/Plans/Plans';
 
 export default function page() {
   return (
@@ -13,6 +14,7 @@ export default function page() {
         <AboutUs />
         <Customers />
         <HowItWorks />
+        <Plans />
       </div>
     </>
   );

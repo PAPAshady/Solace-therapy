@@ -56,3 +56,10 @@ export const reachingOutSteps = [
 `,
   },
 ];
+
+export const planCardPoints = [
+  { id: 1, title: 'انتخاب تراپیست شخصی' },
+  { id: 1, title: 'ساعات منعطف' },
+  { id: 1, title: 'دنبال کردن مسیر درمان' },
+  { id: 1, title: 'منابع بیشتر' },
+];
