@@ -18,7 +18,7 @@ export default function Quote() {
           trigger: container.current,
           start: 'top top',
           end: 'bottom top',
-          markers: true,
+          markers: false,
           onEnter: setLight,
           onLeave: setDark,
           onLeaveBack: setDark,
@@ -32,7 +32,7 @@ export default function Quote() {
   return (
     <div
       ref={container}
-      className="relative flex h-screen items-center justify-center bg-[#fafafa] min-[480px]:h-[85vh] lg:h-screen"
+      className="relative flex h-screen items-center justify-center bg-[#fafafa] min-[480px]:h-[75vh] lg:h-screen"
     >
       <div className="absolute inset-0 size-full">
         <Image
