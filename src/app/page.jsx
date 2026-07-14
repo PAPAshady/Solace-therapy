@@ -4,6 +4,7 @@ import AboutUs from '@templates/index/AboutUs';
 import Customers from '@templates/index/Customers';
 import HowItWorks from '@templates/index/HowItWorks';
 import Plans from '@templates/index/Plans/Plans';
+import Quote from '@templates/index/Quote';
 
 export default function page() {
   return (
@@ -14,7 +15,10 @@ export default function page() {
         <AboutUs />
         <Customers />
         <HowItWorks />
-        <Plans />
+        <div>
+          <Plans />
+          <Quote />
+        </div>
       </div>
     </>
   );
