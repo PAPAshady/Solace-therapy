@@ -25,7 +25,7 @@ export default function AboutUs() {
           scrollTrigger: {
             trigger: '#paragraph',
             start: 'top bottom',
-            end: 'bottom 30%',
+            end: 'bottom 45%',
             scrub: true,
             markers: false,
           },
