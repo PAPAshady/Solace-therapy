@@ -7,7 +7,7 @@ import gsap from 'gsap';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 
-export default function Customers() {
+export default function Customers({ title, description, images }) {
   const container = useRef(null);
 
   useGSAP(
@@ -43,7 +43,7 @@ export default function Customers() {
                 alt="Finding balance after burnout"
                 width={2048}
                 height={2048}
-                src="/images/customers/customer-2.jpg"
+                src={images[0]}
               />
             </div>
             <div className="flex h-100 w-full items-end justify-center overflow-hidden md:aspect-[.651338] md:h-auto md:w-[60%]">
@@ -53,22 +53,16 @@ export default function Customers() {
                 alt="Finding balance after burnout"
                 width={2048}
                 height={2048}
-                src="/images/customers/customer-1.jpg"
+                src={images[1]}
               />
             </div>
           </div>
-
           <div className="flex flex-col gap-12 md:w-1/2">
             <div className="flex flex-col gap-6 md:max-w-97.5 lg:max-w-140">
-              <h2 className="font-secondary text-5xl lg:text-6xl">
-                بازگشت به تعادل <br className="hidden lg:block" /> پس از فرسودگی
+              <h2 className="font-secondary text-5xl lg:text-6xl lg:whitespace-pre-line">
+                {title}
               </h2>
-              <p className="text-paragraph leading-relaxed">
-                پس از سال‌ها درگیر بودن با استرس مزمن و خستگی عاطفی، سارا در یکی از سخت‌ترین
-                دوره‌های زندگی‌اش برای دریافت کمک مراجعه کرد. با برداشتن قدم‌های کوچک اما پیوسته،
-                آرامش و ثبات را دوباره به زندگی خود بازگرداند و توانست بار دیگر با انگیزه و
-                توانمندی‌هایش ارتباط برقرار کند.
-              </p>
+              <p className="text-paragraph leading-relaxed">{description}</p>
             </div>
             <PrimaryButton className="max-w-max">خواندن تجربه کامل</PrimaryButton>
           </div>
