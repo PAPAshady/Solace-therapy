@@ -18,7 +18,7 @@ export default function PlanCard() {
       </div>
       <ul className="flex flex-col gap-4">
         {planCardPoints.map((point) => (
-          <li key={point} className="flex items-center gap-2">
+          <li key={point.id} className="flex items-center gap-2">
             <CheckCircle size={24} className="text-primary" />
             <span className="text-paragraph">{point.title}</span>
           </li>
