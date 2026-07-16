@@ -2,7 +2,7 @@ const stats = [
   { id: 1, title: '+۴۵۰', description: 'جلسات درمان' },
   { id: 2, title: '+۸۵', description: 'مشتریان درمان شده' },
   { id: 3, title: '+۹', description: 'سال سابقه' },
-  { id: 3, title: '+۲۵', description: 'کارگاه و برنامه های آموزشی' },
+  { id: 4, title: '+۲۵', description: 'کارگاه و برنامه های آموزشی' },
 ];
 
 export default function Stats() {
