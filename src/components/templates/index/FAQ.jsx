@@ -8,7 +8,7 @@ export default function FAQ() {
       <div className="container pb-20 lg:pb-30">
         <div className="flex flex-col gap-12 md:flex-row">
           <div className="relative text-center md:flex md:w-[40%] md:flex-col md:justify-between md:text-start">
-            <div className="space-y-6 min-[1200px]:mb-38! md:sticky md:top-[calc(50vh-84px)] md:mb-46">
+            <div className="space-y-6 min-[1200px]:mb-38! md:mb-46">
               <h2 className="text-4xl leading-snug whitespace-pre-wrap md:text-5xl">
                 پاسخ به
                 <span className="hidden min-[1200px]:inline"> </span>
