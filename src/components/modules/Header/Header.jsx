@@ -49,7 +49,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <div id="navLink" key={link.id}>
                 <Link
-                  className="group-data-[theme=dark]/header:text-primary text-white transition-colors duration-300"
+                  className="group-data-[theme=dark]/header:text-primary group-data-[theme=dark]/header:hover:border-primary border-b border-transparent pb-0.5 text-white transition-colors duration-300 group-data-[theme=light]/header:hover:border-white"
                   href={link.href}
                 >
                   {link.title}
