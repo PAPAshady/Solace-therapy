@@ -28,7 +28,7 @@ export default function PlansHeader() {
   );
 
   return (
-    <div ref={container} className="flex flex-col items-center justify-center gap-8">
+    <div ref={container} className="flex flex-col items-center justify-center gap-8 px-2">
       <div className="flex flex-col items-center justify-center gap-6">
         <div className="size-16">
           <svg
@@ -66,7 +66,7 @@ export default function PlansHeader() {
       </div>
       <div className="space-y-6 text-center">
         <div className="relative">
-          <div className="absolute left-1/2 h-50 w-87 -translate-x-1/2 min-[470px]:translate-x-[-73%] min-[470px]:-translate-y-17">
+          <div className="absolute left-1/2 h-50 w-87 -translate-x-1/2 min-[439px]:translate-x-[-71%] min-[439px]:-translate-y-17 min-[480px]:translate-x-[-75%]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"

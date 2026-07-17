@@ -4,16 +4,16 @@ import PlanCard from '@modules/PlanCard/PlanCard';
 export default function Plans() {
   return (
     <div className="bg-[#fafafa] py-20 lg:mt-[-20vh]">
-      <div className="container">
+      <div className="">
         <div className="space-y-12 overflow-hidden">
           <PlansHeader />
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="container grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <PlanCard />
             <PlanCard />
             <PlanCard />
           </div>
         </div>
-        <div className="flex flex-col gap-9.5 pt-20 md:flex-row md:items-center md:justify-between md:gap-30 md:pt-40">
+        <div className="container flex flex-col gap-9.5 pt-20 md:flex-row md:items-center md:justify-between md:gap-30 md:pt-40">
           <h2 className="text-[34px] md:w-1/2">
             حمایتی آگاهانه، بر پایه تجربه و با هدف{' '}
             <span className="text-primary">ایجاد تغییری ماندگار</span>
