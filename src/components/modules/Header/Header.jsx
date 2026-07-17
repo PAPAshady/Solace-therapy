@@ -20,7 +20,7 @@ export default function Header() {
         gsap.fromTo(
           '#navLink',
           { opacity: 0, y: 25 },
-          { opacity: 1, y: 0, duration: 0.5, delay: 2, stagger: 0.1 }
+          { opacity: 1, y: 0, duration: 0.6, delay: 2.5, stagger: 0.1 }
         );
       });
 
