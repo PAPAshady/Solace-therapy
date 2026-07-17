@@ -18,7 +18,7 @@ export default function AboutUs() {
         { opacity: 0.2, y: 5, filter: 'blur(3px)' },
         {
           y: 0,
-          filter: 'blur(0)',
+          filter: 'blur(0px)',
           opacity: 1,
           stagger: 0.2,
           ease: 'none',
