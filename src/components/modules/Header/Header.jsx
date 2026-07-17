@@ -59,8 +59,8 @@ export default function Header() {
           </nav>
         </div>
         <PrimaryButton className="lg:hidden">منو</PrimaryButton>
-        <div id="bookSessionBtn">
-          <PrimaryButton className="hidden lg:block">دریافت نوبت</PrimaryButton>
+        <div className="hidden lg:block" id="bookSessionBtn">
+          <PrimaryButton>دریافت نوبت</PrimaryButton>
         </div>
       </div>
     </header>
