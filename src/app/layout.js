@@ -1,5 +1,6 @@
 import './globals.css';
 import Header from '@modules/Header/Header';
+import Footer from '@modules/Footer/Footer';
 import SmoothScroll from '@/SmoothScroll';
 
 export default function RootLayout({ children }) {
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
       <body className="font-primary font-medium">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
