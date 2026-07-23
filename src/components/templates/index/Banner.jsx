@@ -221,6 +221,7 @@ export default function Banner() {
           width={3600}
           height={3200}
           alt=""
+          unoptimized
           src="/images/banner.jpg"
           className="absolute inset-0 z-1 flex h-screen w-full items-center justify-between object-cover object-top"
           preload
