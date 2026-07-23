@@ -100,8 +100,8 @@ export default function Footer() {
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-1 text-lg sm:flex-row">
             <p className="text-[#ffffffa6]">با ما تماس بگیرید :</p>
-            <Link href="mailto:test.link@gmail.com" className="text-white hover:underline">
-              test.link@gmail.com
+            <Link href="tel:09331844549" className="text-white hover:underline">
+              09331844549
             </Link>
           </div>
         </div>
