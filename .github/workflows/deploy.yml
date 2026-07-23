@@ -26,4 +26,4 @@ jobs:
 
             pnpm build
 
-            pm2 restart solace
+            pm2 restart solace-therapy
