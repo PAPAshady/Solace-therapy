@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="container flex min-h-[60dvh] items-center">
-        <div className="flex flex-col gap-10 pt-12.5 sm:gap-20 lg:pt-56">
+        <div className="flex flex-col gap-10 pt-12.5 sm:gap-20 lg:pt-60">
           <div className="flex flex-col gap-10 sm:gap-16 lg:flex-row-reverse lg:items-center lg:justify-between">
             <p id="subtitle" className="text-paragraph max-w-60 text-sm leading-relaxed">
               درباره روان‌درمانی، رویکرد درمانی، خدمات مشاوره و شیوه همراهی ما با مراجعان بیشتر
