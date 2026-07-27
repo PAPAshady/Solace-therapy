@@ -40,7 +40,7 @@ export default function Team() {
             بردارید.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-10 min-[530px]:grid-cols-2 sm:gap-20 md:gap-30 lg:grid-cols-3 lg:pb-25">
+        <div className="grid grid-cols-1 gap-10 min-[530px]:grid-cols-2 sm:gap-x-20 md:gap-x-30 lg:grid-cols-3 lg:pb-25">
           {team.map((therapist, index) => (
             <TeamCard
               className={index === 1 && 'lg:translate-y-20'}
@@ -50,6 +50,17 @@ export default function Team() {
             />
           ))}
         </div>
+      </div>
+      <div className="flex flex-col gap-9.5 pt-20 md:flex-row md:items-center md:justify-between md:gap-30 md:pt-30">
+        <h2 className="text-[34px] md:w-1/2">
+          حمایتی آگاهانه، بر پایه تجربه و با هدف{' '}
+          <span className="text-primary">ایجاد تغییری ماندگار</span>
+        </h2>
+        <p className="text-paragraph md:w-1/2">
+          جلسات درمانی ما فضایی امن و آرام فراهم می‌کنند تا تغییر، به شکلی طبیعی و ماندگار شکل
+          بگیرد. در طول مسیر، با دقت به نیازهای شما گوش می‌دهیم، هر جا لازم باشد مسیر را شفاف‌تر
+          می‌کنیم و در رسیدن به اهدافی که خودتان انتخاب کرده‌اید، همراهتان هستیم.
+        </p>
       </div>
     </div>
   );
