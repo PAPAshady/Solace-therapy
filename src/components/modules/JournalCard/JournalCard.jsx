@@ -4,12 +4,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
-
-const shapes = [
-  '/images/shapes/shape-1.svg',
-  '/images/shapes/shape-2.svg',
-  '/images/shapes/shape-3.svg',
-];
+import { cardShapes } from '@/data';
 
 export default function JournalCard({ index, title, description, image, className }) {
   return (
@@ -20,7 +15,7 @@ export default function JournalCard({ index, title, description, image, classNam
           width={2048}
           height={2048}
           src={image}
-          style={{ maskImage: `url(${shapes[index % shapes.length]})` }}
+          style={{ maskImage: `url(${cardShapes[index % cardShapes.length]})` }}
           className="aspect-square w-full mask-contain mask-center mask-no-repeat"
         />
       </Link>
