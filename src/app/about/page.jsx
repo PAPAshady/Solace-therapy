@@ -1,6 +1,7 @@
 import Hero from '@templates/shared/Hero';
 import AboutUs from '@templates/About/AboutUs';
 import Founders from '@templates/About/Founders';
+import Team from '@templates/About/Team';
 
 export default function page() {
   return (
@@ -8,6 +9,7 @@ export default function page() {
       <Hero />
       <AboutUs />
       <Founders />
+      <Team />
     </div>
   );
 }

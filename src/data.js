@@ -152,3 +152,33 @@ export const footerServicesLinks = [
   { id: 3, title: 'مشاوره کودک و نوجوان', href: '' },
   { id: 4, title: 'درمان اضطراب و افسردگی', href: '' },
 ];
+
+export const cardShapes = [
+  '/images/shapes/shape-1.svg',
+  '/images/shapes/shape-2.svg',
+  '/images/shapes/shape-3.svg',
+];
+
+export const team = [
+  {
+    id: 1,
+    name: 'زینب عبدلی',
+    description:
+      'روان‌درمانگر حوزه روابط، با تمرکز بر کمک به زوج‌ها و افراد برای بهبود مهارت‌های ارتباطی، تقویت اعتماد و حل تعارض‌های بین‌فردی.',
+    image: '/images/team/therapist-1.jpg',
+  },
+  {
+    id: 2,
+    name: 'نیما زمانی',
+    description:
+      'مربی سلامت و سبک زندگی، با تمرکز بر بهبود سبک زندگی، ایجاد عادت‌های سالم و ارتقای سلامت جسم و روان.',
+    image: '/images/team/therapist-2.jpg',
+  },
+  {
+    id: 3,
+    name: 'سارا موسوی',
+    description:
+      'متخصص ذهن‌آگاهی و مدیریت استرس، با تمرکز بر آموزش روش‌های افزایش آرامش، کاهش فشارهای روزمره و بهبود سلامت روان.',
+    image: '/images/team/therapist-3.jpg',
+  },
+];
