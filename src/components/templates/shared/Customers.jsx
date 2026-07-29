@@ -4,10 +4,17 @@ import { useRef } from 'react';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import clsx from 'clsx';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 
-export default function Customers({ title, description, images }) {
+export default function Customers({
+  title,
+  description,
+  images,
+  dir = 'rtl',
+  subtitle = 'آدم های واقعی، تغییر واقعی',
+}) {
   const container = useRef(null);
 
   useGSAP(
@@ -33,8 +40,13 @@ export default function Customers({ title, description, images }) {
   return (
     <div className="container md:pb-16" ref={container}>
       <div className="space-y-8">
-        <p className="text-primary font-bold">آدم های واقعی. تغییر واقعی</p>
-        <div className="flex flex-col gap-8 md:flex-row-reverse lg:items-center">
+        <p className="text-primary font-bold">{subtitle}</p>
+        <div
+          className={clsx(
+            'flex flex-col gap-8 lg:items-center',
+            dir === 'rtl' ? 'md:flex-row-reverse' : 'md:flex-row'
+          )}
+        >
           <div className="relative flex shrink-0 justify-end md:w-1/2">
             <div className="absolute right-2 -bottom-16 z-1 hidden aspect-[.651338] w-1/2 overflow-hidden md:flex md:items-end md:justify-center">
               <Image
@@ -57,14 +69,23 @@ export default function Customers({ title, description, images }) {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-12 md:w-1/2">
-            <div className="flex flex-col gap-6 md:max-w-97.5 lg:max-w-140">
-              <h2 className="font-secondary text-5xl lg:text-6xl lg:whitespace-pre-line">
-                {title}
-              </h2>
-              <p className="text-paragraph leading-relaxed">{description}</p>
+          <div className="md:w-1/2">
+            <div
+              className={clsx(
+                'flex w-full flex-col items-end gap-12 lg:max-w-140',
+                dir === 'ltr' && 'ms-auto'
+              )}
+            >
+              <div className="flex flex-col gap-6">
+                <h2 className="font-secondary text-5xl lg:text-6xl lg:whitespace-pre-line">
+                  {title}
+                </h2>
+                <p className="text-paragraph leading-relaxed">{description}</p>
+              </div>
+              <div className="w-full">
+                <PrimaryButton className="max-w-max">خواندن تجربه کامل</PrimaryButton>
+              </div>
             </div>
-            <PrimaryButton className="max-w-max">خواندن تجربه کامل</PrimaryButton>
           </div>
         </div>
       </div>
