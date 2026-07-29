@@ -21,7 +21,7 @@ export default function Template({ children }) {
 
   return (
     <div className="relative">
-      <div ref={overlay} className="fixed top-0 left-0 z-50 min-h-dvh min-w-dvw bg-white"></div>
+      <div ref={overlay} className="fixed top-0 left-0 z-50 min-h-screen min-w-dvw bg-white"></div>
       {children}
     </div>
   );

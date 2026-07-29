@@ -34,7 +34,7 @@ export default function Footer() {
     <footer
       ref={container}
       style={{ backgroundImage: 'url(/images/footer.jpg)' }}
-      className="relative flex min-h-dvh flex-col items-center justify-center bg-cover bg-fixed bg-center bg-no-repeat"
+      className="relative flex min-h-screen flex-col items-center justify-center bg-cover bg-fixed bg-center bg-no-repeat"
     >
       <div className="absolute inset-0 size-full bg-black/10"></div>
       <div className="relative z-1 container flex flex-col gap-20 pt-20 pb-10 lg:pt-50 lg:pb-16">
