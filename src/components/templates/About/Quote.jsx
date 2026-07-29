@@ -57,7 +57,7 @@ export default function Quote() {
           className="size-full scale-x-[-1] object-cover object-[70%_center] min-[480px]:object-center"
         />
       </div>
-      <div className="absolute top-0 right-[calc(70%-340px)] hidden h-[2000px] w-170 lg:block">
+      <div className="absolute -top-20 right-[calc(70%-340px)] hidden h-[2000px] w-170 lg:block">
         <div className="size-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ export default function Quote() {
           </svg>
         </div>
       </div>
-      <div className="absolute top-0 right-[calc(70%-340px)] hidden h-[2000px] w-170 lg:block">
+      <div className="absolute -top-20 right-[calc(70%-340px)] hidden h-[2000px] w-170 lg:block">
         <div className="size-full">
           <svg xmlns="http://www.w3.org/2000/svg" className="size-full" viewBox="0 0 680 2000">
             <path
