@@ -5,12 +5,16 @@ import Team from '@templates/About/Team';
 import Quote from '@templates/About/Quote';
 import Customers from '@templates/shared/Customers';
 import FAQ from '@templates/shared/FAQ';
-import { customers } from '@/data';
+import { customers, heroContent } from '@/data';
 
 export default function page() {
   return (
     <div className="space-y-25 lg:space-y-45">
-      <Hero />
+      <Hero
+        title={heroContent.about.title}
+        description={heroContent.about.description}
+        subtitle={heroContent.about.subtitle}
+      />
       <AboutUs />
       <Founders />
       <Team />
