@@ -47,7 +47,7 @@ export default function Quote() {
   return (
     <div
       ref={container}
-      className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-[#fafafa] lg:min-h-[120vh]"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#fafafa] lg:min-h-[120vh]"
     >
       <div className="absolute inset-0 size-full">
         <Image
