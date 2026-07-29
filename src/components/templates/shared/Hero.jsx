@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-export default function Hero() {
+export default function Hero({ title, description, subtitle }) {
   const container = useRef(null);
 
   useGSAP(
@@ -68,23 +68,19 @@ export default function Hero() {
         <div className="flex flex-col gap-10 pt-12.5 sm:gap-20 lg:pt-60">
           <div className="flex flex-col gap-10 sm:gap-16 lg:flex-row-reverse lg:items-center lg:justify-between">
             <p id="subtitle" className="text-paragraph max-w-60 text-sm leading-relaxed">
-              درباره روان‌درمانی، رویکرد درمانی، خدمات مشاوره و شیوه همراهی ما با مراجعان بیشتر
-              بدانید.
+              {subtitle}
             </p>
             <h1
               id="title"
               className="font-secondary max-w-105 text-6xl leading-snug whitespace-pre-wrap md:max-w-170 md:text-[85px]"
             >
-              آشنایی با رویکرد های درمانی و<span className="text-primary"> ارزش های ما</span>
+              {title}
             </h1>
           </div>
           <h5 id="description" className="text-2xl leading-relaxed whitespace-pre-wrap lg:flex">
             <span className="hidden lg:inline-block lg:w-[23%]"></span>
             <p className="lg:w-[78%]">
-              <span className="inline-block w-[15%]"></span> در کلینیک صدف باور داریم که هر فرد،
-              تجربه‌ها، دغدغه‌ها و مسیر زندگی منحصر به‌ فرد خود را دارد. به همین دلیل، تلاش می‌کنیم
-              با رویکردی حرفه‌ای، همدلانه و متناسب با نیازهای هر فرد، در کنار شما باشیم تا با آرامش
-              و آگاهی بیشتری با چالش‌های زندگی روبه‌رو شوید.
+              <span className="inline-block w-[15%]"></span> {description}
             </p>
           </h5>
         </div>

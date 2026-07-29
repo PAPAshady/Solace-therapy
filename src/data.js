@@ -1,6 +1,6 @@
 export const navLinks = [
   { id: 1, title: 'مسیر راه', href: '' },
-  { id: 2, title: 'داستان ها', href: '' },
+  { id: 2, title: 'داستان ها', href: '/stories' },
   { id: 3, title: 'خدمات', href: '' },
   { id: 4, title: 'درباره ما', href: '/about' },
 ];
@@ -149,7 +149,7 @@ export const footerRelatedLinks = [
   { id: 1, title: 'خانه', href: '/' },
   { id: 2, title: 'درباره ما', href: '/about' },
   { id: 3, title: 'خدمات', href: '' },
-  { id: 4, title: 'داستان ها', href: '' },
+  { id: 4, title: 'داستان ها', href: '/stories' },
   { id: 5, title: 'مقالات', href: '' },
 ];
 
@@ -189,3 +189,31 @@ export const team = [
     image: '/images/team/therapist-3.jpg',
   },
 ];
+
+export const heroContent = {
+  about: {
+    title: (
+      <>
+        آشنایی با رویکرد های درمانی و<span className="text-primary"> ارزش های ما</span>
+      </>
+    ),
+    description:
+      ' در کلینیک صدف باور داریم که هر فرد، تجربه‌ها، دغدغه‌ها و مسیر زندگی منحصر به‌ فرد خود را دارد. به همین دلیل، تلاش می‌کنیم با رویکردی حرفه‌ای، همدلانه و متناسب با نیازهای هر فرد، در کنار شما باشیم تا با آرامش و آگاهی بیشتری با چالش‌های زندگی روبه‌رو شوید.',
+    subtitle:
+      'درباره روان‌درمانی، رویکرد درمانی، خدمات مشاوره و شیوه همراهی ما با مراجعان بیشتر بدانید.',
+  },
+  stories: {
+    title: (
+      <span className="md:text-[100px] lg:text-[105px]">
+        آدم های واقعی،
+        <br className="hidden lg:block" />
+        <span className="inline-block lg:hidden"> </span> {/* empty space */}
+        <span className="text-primary">تغییر واقعی</span>
+      </span>
+    ),
+    description:
+      'هر فرد داستان و مسیر منحصربه‌فرد خود را دارد. این روایت‌ها تجربه مراجعانی است که با همراهی روان‌درمانی، با چالش‌های زندگی روبه‌رو شدند، رشد کردند و قدم‌به‌قدم مسیر خود را پیدا کردند.',
+    subtitle:
+      'داستان مراجعان را بخوانید؛ از چالش‌هایی که پشت سر گذاشتند، قدم‌هایی که برداشتند و تغییراتی که در مسیر زندگی‌شان تجربه کردند.',
+  },
+};
