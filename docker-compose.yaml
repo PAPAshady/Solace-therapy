@@ -1,7 +1,7 @@
-services : 
-  app :
-    build : .
-    contianer_name : solace-therapy
-    ports: 
-      - "3000:3000"
-    restart unless-stopped
+services:
+  app:
+    build: .
+    contianer_name: solace-therapy
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
