@@ -1,6 +1,6 @@
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
-import JournalCard from '@modules/JournalCard/JournalCard';
-import { journals } from '@/data';
+import BlogCard from '@modules/BlogCard/BlogCard';
+import { blogs } from '@/data';
 
 export default function Journal() {
   return (
@@ -38,12 +38,12 @@ export default function Journal() {
           <PrimaryButton className="mx-auto w-max">مشاهده همه</PrimaryButton>
         </div>
         <div className="grid grid-cols-1 gap-10 min-[530px]:grid-cols-2 sm:gap-20 md:gap-30 lg:grid-cols-3 lg:pb-25">
-          {journals.map((journal, index) => (
-            <JournalCard
+          {blogs.slice(0, 3).map((blog, index) => (
+            <BlogCard
               className={index === 1 && 'lg:translate-y-25'}
-              key={journal.id}
+              key={blog.id}
               index={index}
-              {...journal}
+              {...blog}
             />
           ))}
         </div>

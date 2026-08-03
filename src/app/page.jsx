@@ -5,7 +5,7 @@ import Customers from '@templates/shared/Customers';
 import HowItWorks from '@templates/index/HowItWorks';
 import Plans from '@templates/index/Plans/Plans';
 import Quote from '@templates/index/Quote';
-import Journal from '@templates/index/Journal';
+import Blogs from '@templates/index/Blogs';
 import Stats from '@templates/index/Stats';
 import FAQ from '@templates/shared/FAQ';
 import BookSession from '@templates/shared/BookSession';
@@ -33,7 +33,7 @@ export default function page() {
           description={customers[1].description}
           images={customers[1].images}
         />
-        <Journal />
+        <Blogs />
         <div>
           <Stats />
           <FAQ />
