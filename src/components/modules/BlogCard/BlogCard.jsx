@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import { cardShapes } from '@/data';
 
-export default function JournalCard({ index, title, description, image, className }) {
+export default function BlogCard({ index, title, description, image, className }) {
   return (
     <div className={clsx('flex flex-col', className)}>
       <Link href="">

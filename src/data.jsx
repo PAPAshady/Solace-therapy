@@ -1,5 +1,5 @@
 export const navLinks = [
-  { id: 1, title: 'مسیر راه', href: '' },
+  { id: 1, title: 'مقالات', href: '/blogs' },
   { id: 2, title: 'داستان ها', href: '/stories' },
   { id: 3, title: 'خدمات', href: '' },
   { id: 4, title: 'درباره ما', href: '/about' },
@@ -107,7 +107,7 @@ export const customers = [
   },
 ];
 
-export const journals = [
+export const blogs = [
   {
     id: 1,
     title: 'چطور بدون عذاب وجدان استراحت کنیم؟',
@@ -169,7 +169,7 @@ export const footerRelatedLinks = [
   { id: 2, title: 'درباره ما', href: '/about' },
   { id: 3, title: 'خدمات', href: '' },
   { id: 4, title: 'داستان ها', href: '/stories' },
-  { id: 5, title: 'مقالات', href: '' },
+  { id: 5, title: 'مقالات', href: '/blogs' },
 ];
 
 export const footerServicesLinks = [
@@ -234,5 +234,16 @@ export const heroContent = {
       'هر فرد داستان و مسیر منحصربه‌فرد خود را دارد. این روایت‌ها تجربه مراجعانی است که با همراهی روان‌درمانی، با چالش‌های زندگی روبه‌رو شدند، رشد کردند و قدم‌به‌قدم مسیر خود را پیدا کردند.',
     subtitle:
       'داستان مراجعان را بخوانید؛ از چالش‌هایی که پشت سر گذاشتند، قدم‌هایی که برداشتند و تغییراتی که در مسیر زندگی‌شان تجربه کردند.',
+  },
+  blogs: {
+    title: (
+      <span className="md:text-[100px] lg:text-[105px]">
+        دانستنی‌هایی برای <span className="text-primary">آرامش و رشد</span>
+      </span>
+    ),
+    description:
+      'مقالات ما فضایی برای مطالعه مقاله‌های تخصصی، تجربه‌های الهام‌بخش و نکات کاربردی در زمینه سلامت روان، رشد فردی و زندگی آگاهانه است؛ محتوایی که شما را در مسیر شناخت بهتر خود و ایجاد تغییرات پایدار همراهی می‌کند.',
+    subtitle:
+      'مقاله‌های سلامت روان، راهکارهای کاربردی و مطالب آموزشی برای رشد فردی، آرامش ذهن و زندگی متعادل.',
   },
 };
