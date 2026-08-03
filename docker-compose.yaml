@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    cotainer_name: next-server
+    restart: unless-stopped
+    expose:
+      - '3000'
+
+  caddy:
+    image: caddy:alpine
+    container_name: caddy-server
+    restart: unless-stopped
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: app
+
+volumes:
+  caddy-data:
+  caddy-config:
