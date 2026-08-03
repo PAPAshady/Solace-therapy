@@ -10,6 +10,9 @@ services:
     image: caddy:alpine
     container_name: caddy-server
     restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy-data:/data
