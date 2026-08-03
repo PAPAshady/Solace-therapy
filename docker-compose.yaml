@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: papashady/solace-therapy:latest
     container_name: next-server
     restart: unless-stopped
     expose:
