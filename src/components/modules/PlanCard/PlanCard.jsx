@@ -24,7 +24,7 @@ export default function PlanCard() {
           </li>
         ))}
       </ul>
-      <PrimaryButton href="" className="w-max">
+      <PrimaryButton href="/book-session" className="w-max">
         شروع مسیر
       </PrimaryButton>
     </div>

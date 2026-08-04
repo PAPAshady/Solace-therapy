@@ -6,7 +6,7 @@ import HowItWorks from '@templates/index/HowItWorks';
 import Plans from '@templates/index/Plans/Plans';
 import Quote from '@templates/index/Quote';
 import Blogs from '@templates/index/Blogs';
-import Stats from '@templates/index/Stats';
+import Stats from '@templates/shared/Stats';
 import FAQ from '@templates/shared/FAQ';
 import BookSession from '@templates/shared/BookSession';
 import { customers } from '@/data';

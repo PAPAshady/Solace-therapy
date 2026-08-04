@@ -35,7 +35,9 @@ export default function Journal() {
             مجموعه‌ای از مقالات، تمرین‌ها و نکات کاربردی برای کمک به سلامت روان، رشد فردی و شناخت
             بهتر خود.
           </p>
-          <PrimaryButton className="mx-auto w-max">مشاهده همه</PrimaryButton>
+          <PrimaryButton className="mx-auto w-max" href="/blogs">
+            مشاهده همه
+          </PrimaryButton>
         </div>
         <div className="grid grid-cols-1 gap-10 min-[530px]:grid-cols-2 sm:gap-20 md:gap-30 lg:grid-cols-3 lg:pb-25">
           {blogs.slice(0, 3).map((blog, index) => (

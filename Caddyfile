@@ -1,4 +1,3 @@
-solace-therapy.ir, www.solace-therapy.ir {
+www.solace-therapy.ir, solace-therapy.ir {
     reverse_proxy app:3000
 }
-

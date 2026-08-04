@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: papashady/solace-therapy:latest
     container_name: next-server
     restart: unless-stopped
     expose:
@@ -11,13 +11,13 @@ services:
     container_name: caddy-server
     restart: unless-stopped
     ports:
-      - '80:80'
-      - '443:443'
+      - "80:80"
+      - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy-data:/data
       - caddy-config:/config
-    depends_on:
+    depends_on: 
       - app
 
 volumes:
