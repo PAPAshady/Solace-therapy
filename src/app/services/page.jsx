@@ -1,4 +1,5 @@
 import Hero from '@templates/shared/Hero';
+import Services from '@templates/Services/Services';
 import { heroContent } from '@/data';
 
 export default function page() {
@@ -9,6 +10,7 @@ export default function page() {
         description={heroContent.services.description}
         subtitle={heroContent.services.subtitle}
       />
+      <Services />
     </div>
   );
 }
