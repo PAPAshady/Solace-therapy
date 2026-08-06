@@ -37,47 +37,36 @@ export default function Banner({ title, description, images, challenge }) {
         .to(bannerBottomSection.current, { y: -20 });
 
       // timeline to control the background change (to white) when user reaches the end of banner by scrolling
-      const backgroundTl = gsap.timeline({ paused: true });
-      backgroundTl
-        .to('#whiteBackground', { opacity: 1, duration: 0.5 }, '<')
-        .to('#bannerBottomTextWrapper', { opacity: 0, duration: 0.3 }, 0);
+      const backgroundTl = gsap
+        .timeline({ paused: true })
+        .to('#whiteBackground', { opacity: 1, duration: 0.3 })
+        .to('.challenge-text', { color: '#2e3231', duration: 0.3 }, 0)
+        .to('.challenge-icon', { fill: '#7fa69b', duration: 0.3 }, 0);
 
       // control animation for the bottom section of banner
-      let hasPlayed = false;
-      ScrollTrigger.create({
-        trigger: '#bannerBottomTextWrapper',
-        start: 'center center',
-        end: `bottom-=13% center`,
-        endTrigger: container.current,
-        markers: false,
-        pin: true,
-        onUpdate: (self) => {
-          if (self.progress >= 0.8 && !hasPlayed) {
-            hasPlayed = true;
+      const bottomSectionTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#bannerBottomTextWrapper',
+          start: 'center center',
+          end: `bottom bottom`,
+          endTrigger: container.current,
+          markers: false,
+          pin: true,
+          scrub: true,
+          onLeave: () => {
             backgroundTl.play();
             setTheme('dark');
-            return;
-          }
-          if (self.progress < 0.8 && hasPlayed) {
-            hasPlayed = false;
+          },
+          onEnterBack: () => {
             backgroundTl.reverse();
             setTheme('light');
-          }
+          },
         },
       });
 
-      // timeline to control bottom section text opacity as user scrolls
+      // control bottom section text opacity as user scrolls
       const words = gsap.utils.toArray('.challenge > span');
-      const wordsOpacityTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: bannerBottomSection.current,
-          start: 'top+=10% center',
-          end: 'bottom center',
-          markers: false,
-          scrub: true,
-        },
-      });
-      wordsOpacityTl.from(words, {
+      bottomSectionTl.from(words, {
         y: 5,
         opacity: 0.2,
         stagger: 0.2,
@@ -236,7 +225,7 @@ export default function Banner({ title, description, images, challenge }) {
             ref={bannerBottomSection}
             className="flex items-center justify-center text-center md:h-screen md:max-h-180"
           >
-            <div className="mx-auto flex max-w-300 flex-col gap-12 pt-10 text-white">
+            <div className="challenge-text mx-auto flex max-w-300 flex-col gap-12 pt-10 text-white">
               <div className="space-y-6">
                 <div className="mx-auto size-16">
                   <svg
@@ -248,7 +237,7 @@ export default function Banner({ title, description, images, challenge }) {
                     <path
                       d="M13.488 33.368C13.427 32.707 13.504 32.154 13.733 31.528C14.332 29.89 17.841 24.156 18.962 22.357C20.3 20.212 22.147 18.509 23.666 16.515C14.297 11.138 22.092-1.026 31.066.069C40.183 1.181 36.935 13.775 30.811 16.993L30.7 17.43C32.267 20.096 34.133 22.669 35.499 25.451C36.079 26.629 38.512 33.628 39.413 33.635C48.836 28.64 55.555 40.245 47.215 47.019C43.6 49.955 37.7 49.862 35.7 45.15C35.257 44.106 35.349 41.777 34.33 41.707C33.821 41.671 33.098 42.034 32.432 42.053C28.652 42.159 24.704 41.825 20.952 42.025C19.914 42.079 17.726 42.201 16.838 42.365C16.067 42.506 13.558 46.001 11.797 46.907C1.339 52.287-4.084 39.034 3.651 33.551C6.737 31.364 10.278 31.749 13.491 33.368ZM27.719 3.593C25.745 4.004 23.022 7.409 23.006 9.455C22.987 12.037 25.532 14.141 27.977 14.071C31.971 13.955 36.738 1.717 27.719 3.593ZM35.091 39.436C34.916 38.372 36.298 36.715 36.333 36.047C36.346 35.838 35.171 32.639 34.958 32.093C34.19 30.131 28.146 17.652 26.691 17.649C23.904 20.735 20.764 23.649 18.943 27.477C18.191 29.061 17.781 30.779 17.141 32.401C16.844 33.153 15.755 34.679 15.711 35.154C15.682 35.45 16.548 37.932 16.739 38.273C17.602 39.802 18.386 38.835 19.679 38.813C24.85 38.723 29.961 38.841 35.088 39.436ZM7.358 35.694C1.094 36.844 2.951 48.359 10.093 43.264C14.727 39.962 12.1 34.823 7.358 35.694ZM39.355 44.504C42.677 47.607 49.472 42.326 47.027 37.891C43.683 31.83 35.028 40.46 39.355 44.504Z"
                       transform="translate(7 7)"
-                      fill="white"
+                      className="challenge-icon fill-white"
                     />
                   </svg>
                 </div>

@@ -1,4 +1,5 @@
 import Banner from '@templates/Stories/Banner';
+import Journey from '@templates/Stories/Journey';
 import { customers } from '@/data';
 
 export default async function page({ params }) {
@@ -13,6 +14,7 @@ export default async function page({ params }) {
         images={client.images}
         challenge={client.challenge}
       />
+      <Journey />
     </div>
   );
 }
