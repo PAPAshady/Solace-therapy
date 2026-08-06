@@ -10,13 +10,14 @@ export default function page() {
         description={heroContent.stories.description}
         subtitle={heroContent.stories.subtitle}
       />
-      {customers.map(({ id, title, description, images, subtitle }, index) => (
+      {customers.map(({ id, title, description, images, subtitle, slug }, index) => (
         <Customers
           key={id}
           title={title}
           description={description}
           images={images}
           subtitle={subtitle}
+          slug={slug}
           dir={index % 2 === 0 ? 'rtl' : 'ltr'}
         />
       ))}

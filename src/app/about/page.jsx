@@ -23,6 +23,7 @@ export default function page() {
         title={customers[2].title}
         description={customers[2].description}
         images={customers[2].images}
+        slug={customers[2].slug}
       />
       <div className="bg-[#fafafa] py-10">
         <FAQ />

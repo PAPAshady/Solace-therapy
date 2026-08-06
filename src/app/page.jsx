@@ -22,6 +22,7 @@ export default function page() {
           title={customers[0].title}
           description={customers[0].description}
           images={customers[0].images}
+          slug={customers[0].slug}
         />
         <HowItWorks />
         <div>
@@ -32,6 +33,7 @@ export default function page() {
           title={customers[1].title}
           description={customers[1].description}
           images={customers[1].images}
+          slug={customers[1].slug}
         />
         <Blogs />
         <div>

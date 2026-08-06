@@ -1,10 +1,20 @@
 import Banner from '@templates/Stories/Banner';
+import Journey from '@templates/Stories/Journey';
+import { customers } from '@/data';
 
-export default function page() {
+export default async function page({ params }) {
+  const { slug } = await params;
+  const client = customers.find((customer) => customer.slug === slug);
+
   return (
     <div>
-      <Banner />
-      <div className="h-100 bg-purple-500">Hello im the next section</div>
+      <Banner
+        title={client.title}
+        description={client.description}
+        images={client.images}
+        challenge={client.challenge}
+      />
+      <Journey />
     </div>
   );
 }

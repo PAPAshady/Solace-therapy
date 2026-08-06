@@ -14,6 +14,7 @@ export default function Customers({
   images,
   dir = 'rtl',
   subtitle = 'آدم های واقعی، تغییر واقعی',
+  slug,
 }) {
   const container = useRef(null);
 
@@ -83,7 +84,9 @@ export default function Customers({
                 <p className="text-paragraph leading-relaxed">{description}</p>
               </div>
               <div className="w-full">
-                <PrimaryButton className="max-w-max">خواندن تجربه کامل</PrimaryButton>
+                <PrimaryButton className="max-w-max" href={`/stories/${slug}`}>
+                  خواندن تجربه کامل
+                </PrimaryButton>
               </div>
             </div>
           </div>
