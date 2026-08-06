@@ -36,35 +36,52 @@ export default function Banner() {
         .to(bannerBottomSection.current, { y: -20 });
 
       // timeline to control the background change (to white) when user reaches the end of banner by scrolling
-      const toggleTl = gsap.timeline({ paused: true });
-      toggleTl
+      const backgroundTl = gsap.timeline({ paused: true });
+      backgroundTl
         .to('#whiteBackground', { opacity: 1, duration: 0.5 }, '<')
         .to('#bannerBottomTextWrapper', { opacity: 0, duration: 0.3 }, 0);
 
-      // controll animation for the bottom section of banner
+      // control animation for the bottom section of banner
       let hasPlayed = false;
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '#bannerBottomTextWrapper',
-          start: 'center center',
-          end: `bottom-=13% center`,
-          endTrigger: container.current,
-          markers: false,
-          pin: true,
-          onUpdate: (self) => {
-            if (self.progress >= 0.75 && !hasPlayed) {
-              hasPlayed = true;
-              toggleTl.play();
-              setTheme('dark');
-              return;
-            }
-            if (self.progress < 0.75 && hasPlayed) {
-              hasPlayed = false;
-              toggleTl.reverse();
-              setTheme('light');
-            }
-          },
+      ScrollTrigger.create({
+        trigger: '#bannerBottomTextWrapper',
+        start: 'center center',
+        end: `bottom-=13% center`,
+        endTrigger: container.current,
+        markers: false,
+        pin: true,
+        onUpdate: (self) => {
+          if (self.progress >= 0.8 && !hasPlayed) {
+            hasPlayed = true;
+            backgroundTl.play();
+            setTheme('dark');
+            return;
+          }
+          if (self.progress < 0.8 && hasPlayed) {
+            hasPlayed = false;
+            backgroundTl.reverse();
+            setTheme('light');
+          }
         },
+      });
+
+      // timeline to control bottom section text opacity as user scrolls
+      const words = gsap.utils.toArray('.challenge > span');
+      const wordsOpacityTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: bannerBottomSection.current,
+          start: 'top+=10% center',
+          end: 'bottom center',
+          markers: false,
+          scrub: true,
+        },
+      });
+      wordsOpacityTl.from(words, {
+        y: 5,
+        opacity: 0.2,
+        stagger: 0.2,
+        filter: 'blur(2px)',
+        ease: 'none',
       });
 
       // timeline to controll line drawing
