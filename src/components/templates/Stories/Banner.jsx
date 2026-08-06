@@ -19,7 +19,8 @@ export default function Banner() {
       const imgTl = gsap.timeline({
         scrollTrigger: {
           trigger: '#imgContainer',
-          start: () => `${window.innerWidth >= 768 ? 'top-=80x' : 'top-=72px'} top`,
+          start: () =>
+            `${window.innerWidth >= 1024 ? 'top' : window.innerWidth >= 768 ? 'top-=80x' : 'top-=72px'} top`,
           end: () =>
             `bottom ${window.innerWidth > 767 || window.innerHeight > 900 ? 'top' : '180'}`,
           scrub: true,

@@ -38,11 +38,11 @@ export default function Banner() {
         scrollTrigger: {
           trigger: '#imgContainer',
           start: () => `${window.innerWidth >= 768 ? 'top-=80x' : 'top-=72px'} top`,
-          end: () =>
-            `bottom ${window.innerWidth > 767 || window.innerHeight > 900 ? 'top' : '180'}`,
+          start: () =>
+            `${window.innerWidth >= 1024 ? 'top' : window.innerWidth >= 768 ? 'top-=80x' : 'top-=72px'} top`,
           scrub: true,
           pin: true,
-          markers: true,
+          markers: false,
           invalidateOnRefresh: true,
           onEnter: () => setTheme('light'),
         },
