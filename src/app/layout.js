@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa-IR" dir="rtl">
       <SmoothScroll />
-      <body className="font-primary font-medium">
+      <body className="font-primary text-black font-medium">
         <Header />
         <main>{children}</main>
         <Footer />
