@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { setTheme } from '@/utils';
 
-export default function Banner() {
+export default function Banner({ title, description, images, challenge }) {
   const container = useRef(null);
   const bannerTextContainer = useRef(null);
   const bannerBottomSection = useRef(null);
@@ -191,7 +191,7 @@ export default function Banner() {
           height={3200}
           alt=""
           unoptimized
-          src="/images/customers/customer-1.jpg"
+          src={images[1]}
           className="absolute inset-0 z-1 flex h-screen w-full items-center justify-between object-cover object-[50%_29.75%]"
           preload
         />
@@ -216,24 +216,17 @@ export default function Banner() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-20 lg:pt-40 xl:gap-0!">
             <p
               id="slogan"
-              className="font-secondary text-6xl leading-tight whitespace-pre-wrap min-[480px]:text-7xl min-[1200px]:text-8xl! min-[1440px]:text-[110px]! lg:w-[50%] lg:text-[85px]"
+              className="font-secondary space-x-2 text-6xl leading-tight min-[480px]:text-7xl min-[1200px]:text-8xl! min-[1440px]:text-[110px]! lg:w-[50%] lg:text-[85px]"
             >
-              <span className="inline-block">هر </span>
-              <span className="inline-block">تغییر </span>
-              <span className="inline-block">بزرگی، </span>
-              <br className="hidden lg:block" />
-              <span className="inline-block">از </span>
-              <span className="inline-block">یک </span>
-              <span className="inline-block">قدم </span>
-              <span className="inline-block">آغاز </span>
-              <span className="inline-block">میشود.</span>
+              {title.split(' ').map((word, index) => (
+                <span key={index} className="inline-block">
+                  {word}
+                </span>
+              ))}
             </p>
             <div className="space-y-8 lg:flex lg:w-[50%] lg:max-w-107.5 lg:flex-col xl:max-w-125!">
-              <p className="leading-loose" id="description">
-                در اینجا، با ارائه خدمات روان‌درمانی و مشاوره، همراه شما هستیم تا با آرامش و اطمینان
-                بیشتری با چالش‌های زندگی روبه‌رو شوید. در کنار هم، شناخت عمیق‌تری از خود به دست
-                می‌آوریم، سلامت روان را تقویت می‌کنیم و گام‌به‌گام مسیر رسیدن به تغییرات پایدار را
-                طی می‌کنیم.
+              <p className="text-sm leading-loose min-[400px]:text-base" id="description">
+                {description}
               </p>
             </div>
           </div>
@@ -261,14 +254,12 @@ export default function Banner() {
                 </div>
                 <p className="text-sm font-bold">چالش پیش رو</p>
               </div>
-              <h4 className="challenge space-x-2 text-[28px] leading-relaxed font-semibold whitespace-pre-wrap md:text-4xl md:leading-loose">
-                {'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز'
-                  .split(' ')
-                  .map((word, index) => (
-                    <span className="inline-block" key={index}>
-                      {word}
-                    </span>
-                  ))}
+              <h4 className="challenge space-x-2 text-[24px] leading-relaxed font-semibold whitespace-pre-wrap md:text-4xl md:leading-loose">
+                {challenge.split(' ').map((word, index) => (
+                  <span className="inline-block" key={index}>
+                    {word}
+                  </span>
+                ))}
               </h4>
             </div>
           </div>
