@@ -26,6 +26,8 @@ export default function Footer() {
         onLeave: setDark,
         onLeaveBack: setDark,
         onEnterBack: setLight,
+        invalidateOnRefresh: true,
+        markers: false,
       });
     },
     { scope: container }
