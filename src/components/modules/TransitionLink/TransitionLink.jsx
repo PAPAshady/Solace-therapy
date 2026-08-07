@@ -26,19 +26,11 @@ export default function TransitionLink({ children, href = '', replace = false, .
     gsap.to('#navTransitionOverlay', {
       opacity: 1,
       zIndex: 50,
-      delay: 0,
       duration: 0.2,
       ease: 'none',
       onComplete: () => {
         if (replace) router.replace(href);
         else router.push(href);
-        gsap.to('#navTransitionOverlay', {
-          opacity: 0,
-          zIndex: -1,
-          delay: 0.35,
-          duration: 1,
-          ease: 'none',
-        });
       },
     });
   };
