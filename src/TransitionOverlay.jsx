@@ -1,12 +1,23 @@
 'use client';
-import { useRef } from 'react';
+import { usePathname } from 'next/navigation';
+import { useRef, useEffect } from 'react';
 
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 
 export default function TransitionOverlay() {
+  const pathname = usePathname();
   const overlay = useRef(null);
+
+  useEffect(() => {
+    gsap.to('#navTransitionOverlay', {
+      opacity: 0,
+      zIndex: -1,
+      duration: 1,
+      ease: 'none',
+    });
+  }, [pathname]);
 
   useGSAP(
     () => {
