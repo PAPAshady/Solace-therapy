@@ -19,6 +19,14 @@ export default function Page() {
         },
       });
       linesTl.to('.line-container', { yPercent: -15, opacity: 0.1, duration: 0.3 });
+
+      gsap
+        .timeline({ delay: 0.4 })
+        .from('.img', { opacity: 0, duration: 0.7 })
+        .from('.icon', { opacity: 0, y: -25, duration: 0.7 }, 0)
+        .from('.title', { opacity: 0, y: 25, duration: 0.7 }, 0)
+        .from('.description', { opacity: 0, y: 25, duration: 0.7 }, 0.2)
+        .from('.date', { opacity: 0, y: 25, duration: 0.7 }, 0.4);
     },
     { scope: container }
   );
@@ -48,7 +56,7 @@ export default function Page() {
       <div className="flex flex-col pt-20 lg:flex-row lg:items-start lg:justify-between lg:gap-20 lg:pt-30">
         <div className="flex flex-col gap-4 lg:w-1/2 lg:gap-30">
           <div className="mx-auto flex max-w-120 flex-col items-center gap-14 lg:items-start lg:gap-10">
-            <div className="size-16">
+            <div className="icon size-16">
               <svg role="presentation" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M 7.915 0.157 C 14.433 -0.726 19.391 2.279 25.053 4.877 C 29.999 1.93 35.046 -0.524 41.009 0.113 C 50.12 1.085 47.792 10.452 41.002 13.46 C 34.49 16.346 29.752 12.852 24.759 9.015 C 23.487 9.748 22.384 10.72 21.092 11.431 C 15.971 14.253 9.667 16.477 4.04 13.783 C -3.623 10.119 0.715 1.13 7.915 0.154 Z M 21.405 6.794 C 16.706 5.05 12.282 1.713 7.016 3.095 C 3.829 3.93 0.984 7.729 4.369 10.26 C 8.912 13.658 17.914 10.797 21.405 6.794 Z M 37.303 3.044 C 34.094 3.434 30.743 5.137 28.119 6.951 C 31.539 11.562 39.631 13.399 43.071 7.857 C 45.855 3.373 40.663 2.634 37.303 3.044 Z"
@@ -74,17 +82,17 @@ export default function Page() {
               </svg>
             </div>
             <div className="flex flex-col gap-8 text-center lg:text-start">
-              <h1 className="font-secondary max-w-130 text-5xl leading-snug md:max-w-180 md:text-6xl lg:max-w-120">
+              <h1 className="title font-secondary max-w-130 text-5xl leading-snug md:max-w-180 md:text-6xl lg:max-w-120">
                 چطور بدون عذاب وجدان استراحت کنیم؟
               </h1>
-              <p className="text-paragraph mx-auto max-w-120 leading-relaxed">
+              <p className="description text-paragraph mx-auto max-w-120 leading-relaxed">
                 استراحت کردن تنبلی نیست. در این مقاله با راهکارهایی آشنا می‌شوید که به شما کمک
                 می‌کنند بدون احساس گناه، از خودتان مراقبت کنید و تعادل بیشتری در زندگی داشته باشید.
               </p>
             </div>
-            <p className="text-paragraph/80 text-sm">۱۴۰۵/۰۳/۱۴</p>
+            <p className="date text-paragraph/80 text-sm">۱۴۰۵/۰۳/۱۴</p>
           </div>
-          <div className="mx-auto max-w-160 lg:hidden">
+          <div className="img mx-auto max-w-160 lg:hidden">
             <Image
               alt="Some alt"
               width={2048}
@@ -94,7 +102,7 @@ export default function Page() {
               className="aspect-square w-full mask-contain mask-center mask-no-repeat"
             />
           </div>
-          <div className="mx-auto max-w-120 space-y-16">
+          <div className="mx-auto max-w-120 space-y-16 lg:pt-16">
             <div className="space-y-4">
               <h4 className="text-[26px] md:text-3xl">چرا گاهی مکث کردن ضروری است</h4>
               <p className="text-paragraph leading-relaxed">
@@ -167,7 +175,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="mx-auto hidden max-w-160 lg:sticky lg:top-30 lg:block lg:w-1/2">
+        <div className="img mx-auto hidden max-w-160 lg:sticky lg:top-30 lg:block lg:w-1/2">
           <Image
             alt="Some alt"
             width={2048}
