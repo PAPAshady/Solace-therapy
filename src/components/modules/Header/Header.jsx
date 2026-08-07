@@ -7,6 +7,7 @@ import gsap from 'gsap';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
+import HamburgerMenu from '@modules/HamburgerMenu/HamburgerMenu';
 import { navLinks } from '@/data';
 
 export default function Header() {
@@ -61,7 +62,7 @@ export default function Header() {
             ))}
           </nav>
         </div>
-        <PrimaryButton className="lg:hidden">منو</PrimaryButton>
+        <HamburgerMenu />
         <div className="hidden lg:block" id="bookSessionBtn">
           <TransitionLink href="/book-session">
             <PrimaryButton>دریافت نوبت</PrimaryButton>
