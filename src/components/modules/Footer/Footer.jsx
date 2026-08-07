@@ -9,6 +9,7 @@ import Input from '@modules/Input/Input';
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import { footerRelatedLinks, footerServicesLinks } from '@/data';
 import { setTheme } from '@/utils';
+import TransitionLink from '@modules/TransitionLink/TransitionLink';
 
 export default function Footer() {
   const container = useRef(null);
@@ -67,12 +68,12 @@ export default function Footer() {
               <ul className="flex flex-col gap-10">
                 {footerRelatedLinks.map((link) => (
                   <li key={link.id}>
-                    <Link
+                    <TransitionLink
                       href={link.href}
                       className="font-bold text-white transition-colors duration-300 hover:text-white/70"
                     >
                       {link.title}
-                    </Link>
+                    </TransitionLink>
                   </li>
                 ))}
               </ul>
@@ -82,12 +83,12 @@ export default function Footer() {
               <ul className="flex flex-col gap-10">
                 {footerServicesLinks.map((link) => (
                   <li key={link.id}>
-                    <Link
+                    <TransitionLink
                       href={link.href}
                       className="font-bold text-white transition-colors duration-300 hover:text-white/70"
                     >
                       {link.title}
-                    </Link>
+                    </TransitionLink>
                   </li>
                 ))}
               </ul>

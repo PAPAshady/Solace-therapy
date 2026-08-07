@@ -7,6 +7,7 @@ import gsap from 'gsap';
 import clsx from 'clsx';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
+import TransitionLink from '@modules/TransitionLink/TransitionLink';
 
 export default function Customers({
   title,
@@ -84,9 +85,9 @@ export default function Customers({
                 <p className="text-paragraph leading-relaxed">{description}</p>
               </div>
               <div className="w-full">
-                <PrimaryButton className="max-w-max" href={`/stories/${slug}`}>
-                  خواندن تجربه کامل
-                </PrimaryButton>
+                <TransitionLink href={`/stories/${slug}`}>
+                  <PrimaryButton>خواندن تجربه کامل</PrimaryButton>
+                </TransitionLink>
               </div>
             </div>
           </div>

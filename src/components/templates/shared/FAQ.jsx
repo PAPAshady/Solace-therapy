@@ -1,5 +1,6 @@
 import Accordion from '@modules/Accordion/Accordion';
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
+import TransitionLink from '@modules/TransitionLink/TransitionLink';
 import { FAQs } from '@/data';
 
 export default function FAQ() {
@@ -24,7 +25,9 @@ export default function FAQ() {
                 پاسخ سؤال خود را پیدا نکردید؟ کافی است برای ما پیام بفرستید. با دقت و شفافیت، در
                 کوتاه‌ترین زمان ممکن پاسخ شما را خواهیم داد.
               </p>
-              <PrimaryButton href="/about">درباره ما</PrimaryButton>
+              <TransitionLink href="/about">
+                <PrimaryButton>درباره ما</PrimaryButton>
+              </TransitionLink>
             </div>
           </div>
           <div className="space-y-4 md:w-[60%]">
@@ -37,7 +40,9 @@ export default function FAQ() {
               پاسخ سؤال خود را پیدا نکردید؟ کافی است برای ما پیام بفرستید. با دقت و شفافیت، در
               کوتاه‌ترین زمان ممکن پاسخ شما را خواهیم داد.
             </p>
-            <PrimaryButton href="/about">درباره ما</PrimaryButton>
+            <TransitionLink href="/about">
+              <PrimaryButton>درباره ما</PrimaryButton>
+            </TransitionLink>
           </div>
         </div>
       </div>

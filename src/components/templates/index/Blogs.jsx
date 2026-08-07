@@ -1,6 +1,7 @@
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import BlogCard from '@modules/BlogCard/BlogCard';
 import { blogs } from '@/data';
+import TransitionLink from '@/components/modules/TransitionLink/TransitionLink';
 
 export default function Journal() {
   return (
@@ -35,9 +36,9 @@ export default function Journal() {
             مجموعه‌ای از مقالات، تمرین‌ها و نکات کاربردی برای کمک به سلامت روان، رشد فردی و شناخت
             بهتر خود.
           </p>
-          <PrimaryButton className="mx-auto w-max" href="/blogs">
-            مشاهده همه
-          </PrimaryButton>
+          <TransitionLink href="/blogs">
+            <PrimaryButton className="mx-auto">مشاهده همه</PrimaryButton>
+          </TransitionLink>
         </div>
         <div className="grid grid-cols-1 gap-10 min-[530px]:grid-cols-2 sm:gap-20 md:gap-30 lg:grid-cols-3 lg:pb-25">
           {blogs.slice(0, 3).map((blog, index) => (

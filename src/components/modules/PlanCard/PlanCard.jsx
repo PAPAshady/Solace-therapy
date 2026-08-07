@@ -2,6 +2,7 @@ import { CheckCircle } from 'lucide-react';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import { planCardPoints } from '@/data';
+import TransitionLink from '../TransitionLink/TransitionLink';
 
 export default function PlanCard() {
   return (
@@ -24,9 +25,9 @@ export default function PlanCard() {
           </li>
         ))}
       </ul>
-      <PrimaryButton href="/book-session" className="w-max">
-        شروع مسیر
-      </PrimaryButton>
+      <TransitionLink href="/book-session">
+        <PrimaryButton>شروع مسیر</PrimaryButton>
+      </TransitionLink>
     </div>
   );
 }

@@ -11,6 +11,7 @@ import clsx from 'clsx';
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import Checkbox from '@modules/Checkbox/Checkbox';
 import { setTheme } from '@/utils';
+import TransitionLink from '@/components/modules/TransitionLink/TransitionLink';
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
@@ -269,9 +270,9 @@ export default function Banner() {
                 طی می‌کنیم.
               </p>
               <div id="cta">
-                <PrimaryButton className="text-base!" href="/book-session">
-                  شروع داستان خود
-                </PrimaryButton>
+                <TransitionLink href="/book-session">
+                  <PrimaryButton className="text-base!">شروع داستان خود</PrimaryButton>
+                </TransitionLink>
               </div>
             </div>
           </div>
