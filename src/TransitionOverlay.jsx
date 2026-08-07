@@ -17,6 +17,7 @@ export default function TransitionOverlay() {
       duration: 1,
       ease: 'none',
     });
+    ScrollTrigger.refresh();
   }, [pathname]);
 
   useGSAP(
@@ -28,7 +29,6 @@ export default function TransitionOverlay() {
         duration: 1,
         ease: 'none',
       });
-      ScrollTrigger.refresh();
     },
     { scope: overlay }
   );
