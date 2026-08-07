@@ -18,7 +18,7 @@ function Dot({ variant, dir }) {
 export default function PrimaryButton({
   children,
   variant,
-  isLink = true,
+  isLink = false,
   href = '',
   className,
   ...props

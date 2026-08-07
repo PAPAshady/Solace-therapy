@@ -4,7 +4,8 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import PrimaryButton from '@/components/modules/PrimaryButton/PrimaryButton';
+import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
+import TransitionLink from '@modules/TransitionLink/TransitionLink';
 
 export default function AboutUs() {
   const container = useRef(null);
@@ -113,7 +114,9 @@ export default function AboutUs() {
           اطمینان طی کنید. */}
         </h4>
         <div className="mx-auto max-w-30">
-          <PrimaryButton href="/about">درباره ما</PrimaryButton>
+          <TransitionLink href="/about">
+            <PrimaryButton>درباره ما</PrimaryButton>
+          </TransitionLink>
         </div>
       </div>
     </div>

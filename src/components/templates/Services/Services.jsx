@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
+import TransitionLink from '@modules/TransitionLink/TransitionLink';
 import { setTheme } from '@/utils';
 import { services } from '@/data';
 
@@ -87,7 +88,9 @@ export default function Services() {
                   </p>
                 </div>
                 <div>
-                  <PrimaryButton href="/book-session">دریافت نوبت</PrimaryButton>
+                  <TransitionLink href="/book-session">
+                    <PrimaryButton>دریافت نوبت</PrimaryButton>
+                  </TransitionLink>
                 </div>
               </div>
             </div>
@@ -147,9 +150,9 @@ export default function Services() {
                   </p>
                 </div>
                 <div>
-                  <PrimaryButton variant="ghost" href="/book-session">
-                    دریافت نوبت
-                  </PrimaryButton>
+                  <TransitionLink href="/book-session">
+                    <PrimaryButton variant="ghost">دریافت نوبت</PrimaryButton>
+                  </TransitionLink>
                 </div>
               </div>
             </div>
