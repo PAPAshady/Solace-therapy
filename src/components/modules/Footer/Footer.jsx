@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer
       ref={container}
-      style={{ backgroundImage: 'url(/images/footer.jpg)' }}
+      style={{ backgroundImage: 'url(/images/footer.webp)' }}
       className="relative flex min-h-screen flex-col items-center justify-center bg-cover bg-fixed bg-center bg-no-repeat"
     >
       <div className="absolute inset-0 size-full bg-black/10"></div>
