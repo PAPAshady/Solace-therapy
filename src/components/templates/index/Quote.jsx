@@ -51,7 +51,7 @@ export default function Quote() {
       <div className="absolute inset-0 size-full">
         <Image
           alt=""
-          src="/images/index/quote.jpg"
+          src="/images/index/quote.webp"
           width={2048}
           height={2048}
           className="size-full scale-x-[-1] object-cover object-[70%_center] min-[480px]:object-center"

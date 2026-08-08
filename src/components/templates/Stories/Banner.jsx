@@ -190,7 +190,7 @@ export default function Banner({ title, description, images, challenge }) {
             height={2048}
             alt=""
             unoptimized
-            src="/images/client-story/banner.jpg"
+            src="/images/client-story/banner.webp"
             className="size-full object-cover"
             preload
           />

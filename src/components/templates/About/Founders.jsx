@@ -63,7 +63,7 @@ export default function Founders() {
               alt="دکتر سارا احمدی"
               width={2048}
               height={2048}
-              src="/images/about/founder.jpg"
+              src="/images/about/founder.webp"
             />
           </div>
           <div className="border-primary flex flex-col gap-5 border-r-[3px] py-2 ps-10 md:w-1/2">
