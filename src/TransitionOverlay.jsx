@@ -18,6 +18,10 @@ export default function TransitionOverlay() {
       ease: 'none',
     });
     ScrollTrigger.refresh();
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant',
+    });
   }, [pathname]);
 
   useGSAP(
