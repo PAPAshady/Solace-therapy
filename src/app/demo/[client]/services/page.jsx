@@ -5,7 +5,8 @@ import FAQ from '@templates/shared/FAQ';
 import BookSession from '@templates/shared/BookSession';
 import { heroContent } from '@/data';
 
-export default function page() {
+export default async function page({ params }) {
+  const { client } = await params;
   return (
     <div className="space-y-20 pb-25 lg:space-y-40 lg:pb-50">
       <Hero
@@ -15,11 +16,11 @@ export default function page() {
       />
       <div>
         <div className="pb-20 lg:p-0">
-          <Services />
+          <Services client={client} />
         </div>
         <Stats />
         <div className="bg-[#fafafa] md:pt-16">
-          <FAQ />
+          <FAQ client={client} />
         </div>
       </div>
       <BookSession />

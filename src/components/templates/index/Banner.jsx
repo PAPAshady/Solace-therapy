@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
+import { useParams } from 'next/navigation';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -11,11 +12,13 @@ import clsx from 'clsx';
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import Checkbox from '@modules/Checkbox/Checkbox';
 import { setTheme } from '@/utils';
+import clients from '@/clients';
 import TransitionLink from '@/components/modules/TransitionLink/TransitionLink';
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 export default function Banner() {
+  const { client } = useParams();
   const container = useRef(null);
   const bannerTextContainer = useRef(null);
   const toggleSwitchContainer = useRef(null);
@@ -260,7 +263,6 @@ export default function Banner() {
               <span className="inline-block">قدم </span>
               <span className="inline-block">آغاز </span>
               <span className="inline-block">میشود.</span>
-              {/* هر تغییر بزرگی، <br className="hidden lg:block" /> از یک قدم آغاز میشود. */}
             </p>
             <div className="space-y-8 lg:flex lg:w-[50%] lg:max-w-107.5 lg:flex-col xl:max-w-125!">
               <p className="leading-loose" id="description">
@@ -270,7 +272,7 @@ export default function Banner() {
                 طی می‌کنیم.
               </p>
               <div id="cta">
-                <TransitionLink href="/book-session">
+                <TransitionLink href={`/${client}/book-session`}>
                   <PrimaryButton className="text-base!">شروع داستان خود</PrimaryButton>
                 </TransitionLink>
               </div>

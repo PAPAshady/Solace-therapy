@@ -6,25 +6,25 @@ import FAQ from '@templates/shared/FAQ';
 import { customers, clientSteps } from '@/data';
 
 export default async function page({ params }) {
-  const { slug } = await params;
-  const client = customers.find((customer) => customer.slug === slug);
+  const { slug, client } = await params;
+  const customer = customers.find((customer) => customer.slug === slug);
 
   return (
     <div className="space-y-25 lg:space-y-45">
       <div>
         <Banner
-          title={client.title}
-          description={client.description}
-          images={client.images}
-          challenge={client.challenge}
+          title={customer.title}
+          description={customer.description}
+          images={customer.images}
+          challenge={customer.challenge}
         />
         <Journey />
       </div>
       <div className="space-y-10 lg:space-y-20">
-        <ImageQuote image={client.images[0]} />
+        <ImageQuote image={customer.images[0]} />
         <Step title={clientSteps[0].title} />
       </div>
-      <FAQ />
+      <FAQ client={client} />
     </div>
   );
 }

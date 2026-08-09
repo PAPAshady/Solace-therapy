@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react';
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
 
-export default function AboutUs() {
+export default function AboutUs({ client }) {
   const container = useRef(null);
 
   useGSAP(
@@ -109,12 +109,9 @@ export default function AboutUs() {
           <span>اطمینان</span>
           <span>طی</span>
           <span>کنید.</span>
-          {/* ما در کلینیک صدف، تغییر را فرآیندی می‌دانیم که به زمان، آگاهی و همراهی نیاز دارد. ما با
-          گفت‌وگو، رویکردهای درمانی مؤثر و حمایت مستمر، کنار شما هستیم تا مسیر رشد و آرامش را با
-          اطمینان طی کنید. */}
         </h4>
         <div className="mx-auto max-w-30">
-          <TransitionLink href="/about">
+          <TransitionLink href={`/${client}/about`}>
             <PrimaryButton>درباره ما</PrimaryButton>
           </TransitionLink>
         </div>

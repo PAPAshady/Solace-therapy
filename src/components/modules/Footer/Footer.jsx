@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useRef } from 'react';
+import { useParams } from 'next/navigation';
 
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,9 +11,11 @@ import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import { footerRelatedLinks, footerServicesLinks } from '@/data';
 import { setTheme } from '@/utils';
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
+import clients from '@/clients';
 
 export default function Footer() {
   const container = useRef(null);
+  const { client } = useParams();
 
   useGSAP(
     () => {
@@ -71,7 +74,7 @@ export default function Footer() {
                 {footerRelatedLinks.map((link) => (
                   <li key={link.id}>
                     <TransitionLink
-                      href={link.href}
+                      href={`/${client}${link.href}`}
                       className="font-bold text-white transition-colors duration-300 hover:text-white/70"
                     >
                       {link.title}
@@ -86,7 +89,7 @@ export default function Footer() {
                 {footerServicesLinks.map((link) => (
                   <li key={link.id}>
                     <TransitionLink
-                      href={link.href}
+                      href={`/${client}${link.href}`}
                       className="font-bold text-white transition-colors duration-300 hover:text-white/70"
                     >
                       {link.title}
@@ -101,8 +104,8 @@ export default function Footer() {
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-1 text-lg sm:flex-row">
             <p className="text-[#ffffffa6]">با ما تماس بگیرید :</p>
-            <Link href="tel:09331844549" className="text-white hover:underline">
-              09331844549
+            <Link href={`tel:${clients[client]?.phone}`} className="text-white hover:underline">
+              {clients[client]?.phone || '09123456789'}
             </Link>
           </div>
         </div>

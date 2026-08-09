@@ -1,3 +1,6 @@
+'use client';
+import { useParams } from 'next/navigation';
+
 import { CheckCircle } from 'lucide-react';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
@@ -5,6 +8,7 @@ import { planCardPoints } from '@/data';
 import TransitionLink from '../TransitionLink/TransitionLink';
 
 export default function PlanCard() {
+  const { client } = useParams();
   return (
     <div className="hover:border-primary flex flex-col gap-10 rounded-2xl border border-white bg-white p-8 transition-colors duration-300">
       <div className="space-y-2.5">
@@ -25,7 +29,7 @@ export default function PlanCard() {
           </li>
         ))}
       </ul>
-      <TransitionLink href="/book-session">
+      <TransitionLink href={`/${client}/book-session`}>
         <PrimaryButton>شروع مسیر</PrimaryButton>
       </TransitionLink>
     </div>

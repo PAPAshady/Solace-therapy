@@ -16,6 +16,7 @@ export default function Customers({
   dir = 'rtl',
   subtitle = 'آدم های واقعی، تغییر واقعی',
   slug,
+  client,
 }) {
   const container = useRef(null);
 
@@ -85,7 +86,7 @@ export default function Customers({
                 <p className="text-paragraph leading-relaxed">{description}</p>
               </div>
               <div className="w-full">
-                <TransitionLink href={`/stories/${slug}`}>
+                <TransitionLink href={`/${client}/stories/${slug}`}>
                   <PrimaryButton>خواندن تجربه کامل</PrimaryButton>
                 </TransitionLink>
               </div>
