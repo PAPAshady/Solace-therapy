@@ -88,7 +88,7 @@ export default function Services({ client }) {
                   </p>
                 </div>
                 <div>
-                  <TransitionLink href={`/${client}/book-session`}>
+                  <TransitionLink href={`/demo/${client}/book-session`}>
                     <PrimaryButton>دریافت نوبت</PrimaryButton>
                   </TransitionLink>
                 </div>
@@ -150,7 +150,7 @@ export default function Services({ client }) {
                   </p>
                 </div>
                 <div>
-                  <TransitionLink href={`/${client}/book-session`}>
+                  <TransitionLink href={`/demo/${client}/book-session`}>
                     <PrimaryButton variant="ghost">دریافت نوبت</PrimaryButton>
                   </TransitionLink>
                 </div>

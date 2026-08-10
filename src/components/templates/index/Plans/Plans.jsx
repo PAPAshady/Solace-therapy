@@ -1,5 +1,6 @@
 import PlansHeader from './PlansHeader';
 import PlanCard from '@modules/PlanCard/PlanCard';
+import { plans } from '@/data';
 
 export default function Plans() {
   return (
@@ -8,9 +9,9 @@ export default function Plans() {
         <div className="space-y-12 overflow-hidden">
           <PlansHeader />
           <div className="container grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <PlanCard />
-            <PlanCard />
-            <PlanCard />
+            {plans.map((plan) => (
+              <PlanCard key={plan.id} {...plan} />
+            ))}
           </div>
         </div>
         <div className="container flex flex-col gap-9.5 pt-20 md:flex-row md:items-center md:justify-between md:gap-30 md:pt-40">

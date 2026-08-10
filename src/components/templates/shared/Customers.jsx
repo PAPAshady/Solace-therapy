@@ -86,7 +86,7 @@ export default function Customers({
                 <p className="text-paragraph leading-relaxed">{description}</p>
               </div>
               <div className="w-full">
-                <TransitionLink href={`/${client}/stories/${slug}`}>
+                <TransitionLink href={`/demo/${client}/stories/${slug}`}>
                   <PrimaryButton>خواندن تجربه کامل</PrimaryButton>
                 </TransitionLink>
               </div>

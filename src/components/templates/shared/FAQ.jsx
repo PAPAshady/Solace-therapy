@@ -40,7 +40,7 @@ export default function FAQ({ client }) {
               پاسخ سؤال خود را پیدا نکردید؟ کافی است برای ما پیام بفرستید. با دقت و شفافیت، در
               کوتاه‌ترین زمان ممکن پاسخ شما را خواهیم داد.
             </p>
-            <TransitionLink href="/about">
+            <TransitionLink href={`/demo/${client}/about`}>
               <PrimaryButton>درباره ما</PrimaryButton>
             </TransitionLink>
           </div>

@@ -29,7 +29,7 @@ export default async function page({ params }) {
         <HowItWorks />
         <div>
           <Plans />
-          <Quote />
+          <Quote client={client} />
         </div>
         <Customers
           title={customers[1].title}

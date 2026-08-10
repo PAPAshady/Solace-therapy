@@ -74,7 +74,7 @@ export default function Footer() {
                 {footerRelatedLinks.map((link) => (
                   <li key={link.id}>
                     <TransitionLink
-                      href={`/${client}${link.href}`}
+                      href={`/demo/${client}${link.href}`}
                       className="font-bold text-white transition-colors duration-300 hover:text-white/70"
                     >
                       {link.title}
@@ -89,7 +89,7 @@ export default function Footer() {
                 {footerServicesLinks.map((link) => (
                   <li key={link.id}>
                     <TransitionLink
-                      href={`/${client}${link.href}`}
+                      href={`/demo/${client}${link.href}`}
                       className="font-bold text-white transition-colors duration-300 hover:text-white/70"
                     >
                       {link.title}
@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="text-center text-sm text-[#ffffffa6]">
-          © کلینیک صدف. تمامی حقوق محفوظ است ۱۴۰۵.
+          © {clients[client].clinicName}. تمامی حقوق محفوظ است ۱۴۰۵.
         </p>
       </div>
     </footer>

@@ -6,8 +6,9 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 import { setTheme } from '@/utils';
+import clients from '@/clients';
 
-export default function Quote() {
+export default function Quote({ client }) {
   const container = useRef(null);
   const setDark = () => setTheme('dark');
   const setLight = () => setTheme('light');
@@ -103,7 +104,7 @@ export default function Quote() {
           <h2 className="font-secondary max-w-180 text-5xl leading-tight text-white md:text-6xl">
             ”در سخت‌ترین روزها، آخرین چیزی که به آن نیاز داریم، شرمندگی از انسان بودنمان است.“
           </h2>
-          <p className="text-white/65">دکتر سارا رضایی، روان‌درمانگر و بنیان‌گذار کلینیک صدف</p>
+          <p className="text-white/65">{clients[client].quote}</p>
         </div>
       </div>
     </div>

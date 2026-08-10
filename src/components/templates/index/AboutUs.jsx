@@ -111,7 +111,7 @@ export default function AboutUs({ client }) {
           <span>کنید.</span>
         </h4>
         <div className="mx-auto max-w-30">
-          <TransitionLink href={`/${client}/about`}>
+          <TransitionLink href={`/demo/${client}/about`}>
             <PrimaryButton>درباره ما</PrimaryButton>
           </TransitionLink>
         </div>

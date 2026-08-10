@@ -22,7 +22,7 @@ export default async function page({ params }) {
       </div>
       <div className="space-y-10 lg:space-y-20">
         <ImageQuote image={customer.images[0]} />
-        <Step title={clientSteps[0].title} />
+        <Step title={clientSteps[2].title} />
       </div>
       <FAQ client={client} />
     </div>

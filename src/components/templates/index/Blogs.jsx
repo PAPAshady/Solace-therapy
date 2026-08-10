@@ -36,7 +36,7 @@ export default function Journal({ client }) {
             مجموعه‌ای از مقالات، تمرین‌ها و نکات کاربردی برای کمک به سلامت روان، رشد فردی و شناخت
             بهتر خود.
           </p>
-          <TransitionLink href={`/${client}/blogs`}>
+          <TransitionLink href={`/demo/${client}/blogs`}>
             <PrimaryButton className="mx-auto">مشاهده همه</PrimaryButton>
           </TransitionLink>
         </div>

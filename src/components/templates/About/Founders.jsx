@@ -5,7 +5,9 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-export default function Founders() {
+import clients from '@/clients';
+
+export default function Founders({ client }) {
   const container = useRef(null);
 
   useGSAP(
@@ -35,19 +37,16 @@ export default function Founders() {
             </h2>
             <div className="text-paragraph flex flex-col gap-4">
               <p className="leading-relaxed whitespace-pre-wrap">
-                کلینیک صدف توسط
-                <span className="font-bold text-black">
-                  {' '}
-                  دکتر سارا احمدی، روان‌درمانگری با بیش از ۱۵ سال تجربه،{' '}
-                </span>
+                {clients[client].clinicName} توسط
+                <span className="font-bold text-black"> {clients[client].name}، </span>
                 بنیان‌گذاری شد. باور او بر این است که تغییرات ماندگار از قدم‌های کوچک و آگاهانه آغاز
                 می‌شوند و هر فرد، با همراهی و حمایت درست، می‌تواند مسیر رشد و سلامت روان خود را با
                 اطمینان بیشتری طی کند.
               </p>
               <p>
-                کلینیک صدف با این هدف شکل گرفت که هر فرد، در هر مرحله از زندگی، جایی امن برای شنیده
-                شدن، تأمل و یافتن مسیر پیش روی خود داشته باشد. سارا احمدی باور دارد که تغییرهای
-                ماندگار، از فضایی سرشار از اعتماد، احترام و همراهی آغاز می‌شوند.
+                {clients[client].clinicName} با این هدف شکل گرفت که هر فرد، در هر مرحله از زندگی،
+                جایی امن برای شنیده شدن، تأمل و یافتن مسیر پیش روی خود داشته باشد. سارا احمدی باور
+                دارد که تغییرهای ماندگار، از فضایی سرشار از اعتماد، احترام و همراهی آغاز می‌شوند.
               </p>
             </div>
           </div>
@@ -60,10 +59,10 @@ export default function Founders() {
             <Image
               id="img"
               className="size-[115%] max-w-none object-cover"
-              alt="دکتر سارا احمدی"
+              alt={clients[client].founder}
               width={2048}
               height={2048}
-              src="/images/about/founder.webp"
+              src={clients[client].founderImg || '/images/about/founder.webp'}
             />
           </div>
           <div className="border-primary flex flex-col gap-5 border-r-[3px] py-2 ps-10 md:w-1/2">
@@ -71,7 +70,7 @@ export default function Founders() {
               روان‌درمانی برای تغییر دادن آدم‌ها نیست؛ برای این است که در کنارشان باشیم تا{' '}
               <span className="text-primary">مسیر خودشان را پیدا کنند.</span>
             </h4>
-            <span className="text-paragraph text-sm">— دکتر سارا احمدی</span>
+            <span className="text-paragraph text-sm">— {clients[client].quote}</span>
           </div>
         </div>
       </div>

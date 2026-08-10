@@ -4,8 +4,9 @@ import { useRef } from 'react';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import clients from '@/clients';
 
-export default function BlogContent() {
+export default function BlogContent({ client }) {
   const container = useRef(null);
   useGSAP(
     () => {
@@ -171,7 +172,7 @@ export default function BlogContent() {
               </p>
             </div>
             <p className="text-paragraph/60 my-8">
-              - دکتر سارا رضایی، روان‌درمانگر و بنیان‌گذار کلینیک صدف
+              - {clients[client].quote}
             </p>
           </div>
         </div>
