@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="text-center text-sm text-[#ffffffa6]">
-          © {clients[client].clinicName}. تمامی حقوق محفوظ است ۱۴۰۵.
+          © {clients[client]?.clinicName}. تمامی حقوق محفوظ است ۱۴۰۵.
         </p>
       </div>
     </footer>

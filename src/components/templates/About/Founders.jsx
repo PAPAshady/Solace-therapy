@@ -38,7 +38,7 @@ export default function Founders({ client }) {
             <div className="text-paragraph flex flex-col gap-4">
               <p className="leading-relaxed whitespace-pre-wrap">
                 {clients[client].clinicName} توسط
-                <span className="font-bold text-black"> {clients[client].name}، </span>
+                <span className="font-bold text-black"> {clients[client].founder}، </span>
                 بنیان‌گذاری شد. باور او بر این است که تغییرات ماندگار از قدم‌های کوچک و آگاهانه آغاز
                 می‌شوند و هر فرد، با همراهی و حمایت درست، می‌تواند مسیر رشد و سلامت روان خود را با
                 اطمینان بیشتری طی کند.
