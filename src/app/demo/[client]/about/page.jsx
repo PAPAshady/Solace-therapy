@@ -29,7 +29,7 @@ export default async function page({ params }) {
         slug={customers[2].slug}
       />
       <div className="bg-[#fafafa] py-10">
-        <FAQ />
+        <FAQ client={client} />
       </div>
     </div>
   );

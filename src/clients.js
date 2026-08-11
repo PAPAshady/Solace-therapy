@@ -1,11 +1,11 @@
 const clients = {
-  'nima-zamani': {
-    logo: 'نیما کلینیک',
-    founder: 'دکتر نیما زمانی',
-    name: 'نیما زمانی',
-    phone: '09331844549',
-    clinicName: 'مرکز مشاور پروا',
-    quote: 'نیما زمانی. خدای روانشناسی',
+  'mahnaz-arianmanesh': {
+    logo: 'مهناز آریان منش',
+    founder: 'مهناز آریان منش',
+    name: 'مهناز آریان منش',
+    phone: '09134281455',
+    clinicName: 'کلینیک آریان منش',
+    quote: 'مهناز آریان منش، روانشناس بالینی',
     founderImg: null,
   },
 };

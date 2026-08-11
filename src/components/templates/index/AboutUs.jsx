@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
+import clients from '@/clients';
 
 export default function AboutUs({ client }) {
   const container = useRef(null);
@@ -73,8 +74,9 @@ export default function AboutUs({ client }) {
         >
           <span>ما</span>
           <span>در</span>
-          <span>کلینیک</span>
-          <span>صدف،</span>
+          {clients[client].clinicName.split(' ').map((word, index) => (
+            <span key={index}>{word}</span>
+          ))}
           <span>تغییر</span>
           <span>را</span>
           <span>فرایندی</span>
