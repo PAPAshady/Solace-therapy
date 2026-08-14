@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import TransitionLink from '@modules/TransitionLink/TransitionLink';
 
 export default function ServiceCard({ id, image, title, description }) {
   return (
@@ -8,7 +8,7 @@ export default function ServiceCard({ id, image, title, description }) {
       style={{ backgroundImage: `url(/images/services/${image})` }}
       id="serviceCard"
     >
-      <Link
+      <TransitionLink
         href="/services"
         className="container flex size-full flex-col justify-between gap-4 px-6 pt-4 pb-6"
       >
@@ -24,7 +24,7 @@ export default function ServiceCard({ id, image, title, description }) {
             </span>
           </div>
         </div>
-      </Link>
+      </TransitionLink>
     </div>
   );
 }
