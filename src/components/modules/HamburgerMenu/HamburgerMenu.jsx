@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef } from 'react';
+import { useParams } from 'next/navigation';
 
 import gsap from 'gsap';
 import { X } from 'lucide-react';
@@ -10,6 +11,7 @@ import { navLinks } from '@/data';
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { client } = useParams();
   const menu = useRef(null);
 
   const toggle = () => {
@@ -48,13 +50,13 @@ export default function HamburgerMenu() {
           <ul className="flex flex-col gap-14">
             {navLinks.map((link) => (
               <li className="link" key={link.id} onClick={() => setIsOpen(false)}>
-                <TransitionLink className="text-2xl font-semibold" href={link.href}>
+                <TransitionLink className="text-2xl font-semibold" href={`/${client}${link.href}`}>
                   {link.title}
                 </TransitionLink>
               </li>
             ))}
             <li className="link">
-              <TransitionLink href="/book-session">
+              <TransitionLink href={`/${client}/book-session`}>
                 <PrimaryButton>دریافت نوبت</PrimaryButton>
               </TransitionLink>
             </li>

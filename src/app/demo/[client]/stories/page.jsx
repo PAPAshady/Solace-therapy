@@ -2,7 +2,8 @@ import Hero from '@templates/shared/Hero';
 import Customers from '@templates/shared/Customers';
 import { heroContent, customers } from '@/data';
 
-export default function page() {
+export default async function page({ params }) {
+  const { client } = await params;
   return (
     <div className="space-y-25 pb-25 lg:space-y-50 lg:pb-50">
       <Hero
@@ -19,6 +20,7 @@ export default function page() {
           subtitle={subtitle}
           slug={slug}
           dir={index % 2 === 0 ? 'rtl' : 'ltr'}
+          client={client}
         />
       ))}
     </div>

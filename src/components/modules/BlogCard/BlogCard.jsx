@@ -6,11 +6,11 @@ import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
 import { cardShapes } from '@/data';
 
-export default function BlogCard({ index, title, description, slug, image, className }) {
+export default function BlogCard({ index, title, description, slug, image, className, client }) {
   return (
     <div className="bg flex justify-center">
       <div className={clsx('flex w-full max-w-115 flex-col', className)}>
-        <TransitionLink href={`/blog/${slug}`}>
+        <TransitionLink href={`/demo/${client}/blog/${slug}`}>
           <Image
             alt={title}
             width={2048}
@@ -24,7 +24,7 @@ export default function BlogCard({ index, title, description, slug, image, class
         <div className="mx-auto mb-6 flex max-w-85 grow flex-col justify-center space-y-4 text-center">
           <h3>
             <TransitionLink
-              href={`/blog/${slug}`}
+              href={`/demo/${client}/blog/${slug}`}
               className="font-secondary text-primary line-clamp-2 text-3xl sm:text-[32px]"
             >
               {title}
@@ -32,7 +32,7 @@ export default function BlogCard({ index, title, description, slug, image, class
           </h3>
           <p className="text-paragraph line-clamp-2 text-sm leading-relaxed">{description}</p>
         </div>
-        <TransitionLink href={`/blog/${slug}`}>
+        <TransitionLink href={`/demo/${client}/blog/${slug}`}>
           <PrimaryButton className="mx-auto">بیشتر بخوانید</PrimaryButton>
         </TransitionLink>
       </div>

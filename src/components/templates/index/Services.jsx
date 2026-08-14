@@ -7,9 +7,8 @@ import gsap from 'gsap';
 import ServiceCard from '@modules/ServiceCard/ServiceCard';
 import { services } from '@/data';
 
-export default function Services() {
+export default function Services({ client }) {
   const container = useRef(null);
-
   useGSAP(
     () => {
       const cards = gsap.utils.toArray('#serviceCard', container.current);
@@ -58,7 +57,14 @@ export default function Services() {
     <div ref={container} className="container flex items-center pt-10 sm:p-0">
       <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2 xl:h-137.5 xl:grid-cols-4!">
         {services.map(({ id, title, description, image }) => (
-          <ServiceCard key={id} id={id} title={title} description={description} image={image} />
+          <ServiceCard
+            key={id}
+            id={id}
+            title={title}
+            description={description}
+            image={image}
+            client={client}
+          />
         ))}
       </div>
     </div>

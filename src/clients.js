@@ -1,0 +1,80 @@
+const clients = {
+  'mahnaz-arianmanesh': {
+    logo: 'مهناز آریان منش',
+    founder: 'مهناز آریان منش',
+    phone: '09134281455',
+    clinicName: 'کلینیک آریان منش',
+    quote: 'مهناز آریان منش، روانشناس بالینی',
+    founderImg:
+      'https://mahnazarianmanesh.ir/uploadfile/file_portal/site_14305_web/file_portal_end/%D9%BE%DB%8C%D9%88%D9%86%D8%AF-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D8%AA/%D8%A7%D8%B3%D9%84%D8%A7%DB%8C%D8%AF%D8%B1/12-5343824-%D8%B4%D9%81%D8%A7%D9%81.webp',
+  },
+  'aeen-clinic': {
+    logo: 'مرکز مشاوره آیین',
+    founder: 'محمد کربلایی',
+    phone: '09130500368',
+    clinicName: 'مرکز مشاوره آیین',
+    quote: 'محمد کربلایی، زوج درمانگر و بنیان گذار مرکز مشاوره آیین',
+    founderImg: 'https://aeencc.com/wp-content/uploads/2025/04/mohammad-karbalaii-3.webp',
+  },
+  'tohid-clinic': {
+    logo: 'مرکز مشاوره توحید',
+    founder: 'بنیان گذار مرکز مشاوره توحید',
+    phone: '09138389020',
+    clinicName: 'مرکز مشاوره توحید',
+    quote: 'بنیان گذار مرکز مشاوره توحید',
+  },
+  'shaghayegh-bazargan': {
+    logo: 'شقایق بازرگان',
+    founder: 'دکتر شقایق بازرگان',
+    phone: '09134625934',
+    clinicName: 'کلینیک بازرگان',
+    quote: 'شقایق بازرگان، روانشناس بالینی',
+    founderImg: 'https://dbazargan.ir/wp-content/uploads/2022/09/BG-barzagan.jpg',
+  },
+  'azadi-clinic': {
+    logo: 'مرکز مشاوره آزادی',
+    founder: 'اعظم اعرابی',
+    phone: '09394268643',
+    clinicName: 'مرکز مشاوره آزادی',
+    quote: 'بنیان گذار مرکز مشاوره آزادی',
+  },
+  'harekate-no': {
+    logo: 'مرکز مشاوره حرکت نو',
+    founder: 'اعظم اعرابی',
+    phone: '09138368256',
+    clinicName: 'مرکز مشاوره حرکت نو',
+    quote: 'اعظم اعرابی، روانشناس بالینی و بنیان گذار مرکز مشاوره حرکت نو',
+  },
+  salam: {
+    logo: 'مرکز مشاوره سلام',
+    founder: 'بنیان گذار مرکز مشاوره سلام',
+    phone: '09138100149',
+    clinicName: 'مرکز مشاوره سلام',
+    quote: 'بنیان گذار مرکز مشاوره سلام',
+  },
+  'janan-clinic': {
+    logo: 'مرکز مشاوره جانان',
+    founder: 'آوا لباف',
+    phone: '09911182380',
+    clinicName: 'مرکز مشاوره جانان',
+    quote: 'آوا لباف، روان دروانگر و بنیان گذار مرکز مشاوره جانان',
+    founderImg: 'https://jananclinic.ir/wp-content/uploads/2026/06/ava-labbaf-2.webp',
+  },
+  'dr-pouralizade': {
+    logo: 'استاد پورعلی زاده',
+    founder: 'استاد پور علی زاده',
+    phone: '09134118416',
+    clinicName: 'مرکز مشاوره پورعلی زاده',
+    quote: 'استاد پورعلی زاده، مشاور و روانشناس',
+    founderImg: 'https://pouralizade.ir/wp-content/uploads/2025/12/prifile-01-e1762507076546.webp',
+  },
+  'khorshid-clinic': {
+    logo: 'مرکز مشاوره خورشید',
+    founder: 'وحید سلطانیان',
+    phone: '09137533407',
+    clinicName: 'مرکز مشاوره خورشید',
+    quote: 'وحید سلطانیان، روان دروانگر و بنیان گذار مرکز مشاوره خورشید',
+  },
+};
+
+export default clients;

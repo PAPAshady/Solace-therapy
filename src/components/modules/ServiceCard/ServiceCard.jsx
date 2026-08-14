@@ -1,6 +1,6 @@
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
 
-export default function ServiceCard({ id, image, title, description }) {
+export default function ServiceCard({ id, image, title, description, client }) {
   return (
     <div
       key={id}
@@ -9,7 +9,7 @@ export default function ServiceCard({ id, image, title, description }) {
       id="serviceCard"
     >
       <TransitionLink
-        href="/services"
+        href={`/demo/${client}/services`}
         className="container flex size-full flex-col justify-between gap-4 px-6 pt-4 pb-6"
       >
         <h3 className="font-secondary line-clamp-2 h-24 text-[32px] text-white">{title}</h3>

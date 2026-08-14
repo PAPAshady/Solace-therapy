@@ -10,7 +10,7 @@ import TransitionLink from '@modules/TransitionLink/TransitionLink';
 import { setTheme } from '@/utils';
 import { services } from '@/data';
 
-export default function Services() {
+export default function Services({ client }) {
   const desktopContainer = useRef(null);
   useGSAP(
     () => {
@@ -88,7 +88,7 @@ export default function Services() {
                   </p>
                 </div>
                 <div>
-                  <TransitionLink href="/book-session">
+                  <TransitionLink href={`/demo/${client}/book-session`}>
                     <PrimaryButton>دریافت نوبت</PrimaryButton>
                   </TransitionLink>
                 </div>
@@ -150,7 +150,7 @@ export default function Services() {
                   </p>
                 </div>
                 <div>
-                  <TransitionLink href="/book-session">
+                  <TransitionLink href={`/demo/${client}/book-session`}>
                     <PrimaryButton variant="ghost">دریافت نوبت</PrimaryButton>
                   </TransitionLink>
                 </div>

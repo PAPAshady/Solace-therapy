@@ -45,7 +45,7 @@ export default function ImageQuote({ image }) {
             روان‌درمانی برای تغییر دادن آدم‌ها نیست؛ برای این است که در کنارشان باشیم تا{' '}
             <span className="text-primary">مسیر خودشان را پیدا کنند.</span>
           </h4>
-          <span className="text-paragraph text-sm">— دکتر سارا احمدی</span>
+          <span className="text-paragraph text-sm">— مراجع کننده</span>
         </div>
       </div>
     </div>

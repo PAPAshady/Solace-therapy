@@ -3,7 +3,7 @@ import BlogCard from '@modules/BlogCard/BlogCard';
 import { blogs } from '@/data';
 import TransitionLink from '@/components/modules/TransitionLink/TransitionLink';
 
-export default function Journal() {
+export default function Journal({ client }) {
   return (
     <div className="container">
       <div className="space-y-8">
@@ -36,7 +36,7 @@ export default function Journal() {
             مجموعه‌ای از مقالات، تمرین‌ها و نکات کاربردی برای کمک به سلامت روان، رشد فردی و شناخت
             بهتر خود.
           </p>
-          <TransitionLink href="/blogs">
+          <TransitionLink href={`/demo/${client}/blogs`}>
             <PrimaryButton className="mx-auto">مشاهده همه</PrimaryButton>
           </TransitionLink>
         </div>
@@ -46,6 +46,7 @@ export default function Journal() {
               className={index === 1 && 'lg:translate-y-25'}
               key={blog.id}
               index={index}
+              client={client}
               {...blog}
             />
           ))}

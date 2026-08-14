@@ -1,14 +1,17 @@
 'use client';
 import { useRef } from 'react';
+import { useParams } from 'next/navigation';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
+import './globals.css';
 
 export default function NotFound() {
   const container = useRef(null);
+  const { client } = useParams();
 
   useGSAP(
     () => {
@@ -85,7 +88,7 @@ export default function NotFound() {
             </p>
           </div>
           <div id="button" className="flex justify-center">
-            <TransitionLink href="/">
+            <TransitionLink href={`/${client}/`}>
               <PrimaryButton>بازگشت به صفحه اصلی</PrimaryButton>
             </TransitionLink>
           </div>

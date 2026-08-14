@@ -1,7 +1,8 @@
 import TeamCard from '@modules/TeamCard/TeamCard';
 import { team } from '@/data';
+import clients from '@/clients';
 
-export default function Team() {
+export default function Team({ client }) {
   return (
     <div className="container lg:-mt-8">
       <div className="space-y-8">
@@ -35,9 +36,9 @@ export default function Team() {
           </div>
           <h2 className="text-4xl leading-snug lg:text-5xl">همراهان شما در مسیر درمان</h2>
           <p className="text-paragraph mx-auto max-w-120">
-            در کلینیک صدف، شما فقط یک مراجعه‌کننده نیستید. اعضای تیم ما با گوش دادن، همراهی و احترام
-            به مسیر منحصربه‌فرد هر فرد، در کنار شما هستند تا قدم‌های بعدی را با اطمینان بیشتری
-            بردارید.
+            در {clients[client].clinicName}، شما فقط یک مراجعه‌کننده نیستید. اعضای تیم ما با گوش
+            دادن، همراهی و احترام به مسیر منحصربه‌فرد هر فرد، در کنار شما هستند تا قدم‌های بعدی را
+            با اطمینان بیشتری بردارید.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-10 min-[530px]:grid-cols-2 sm:gap-x-20 md:gap-x-30 lg:grid-cols-3 lg:pb-25">

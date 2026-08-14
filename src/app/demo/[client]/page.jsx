@@ -11,34 +11,37 @@ import FAQ from '@templates/shared/FAQ';
 import BookSession from '@templates/shared/BookSession';
 import { customers } from '@/data';
 
-export default function page() {
+export default async function page({ params }) {
+  const { client } = await params;
   return (
     <>
       <Banner />
       <div className="space-y-25 pb-16 lg:space-y-50">
-        <Services />
-        <AboutUs />
+        <Services client={client} />
+        <AboutUs client={client} />
         <Customers
           title={customers[0].title}
           description={customers[0].description}
           images={customers[0].images}
           slug={customers[0].slug}
+          client={client}
         />
         <HowItWorks />
         <div>
           <Plans />
-          <Quote />
+          <Quote client={client} />
         </div>
         <Customers
           title={customers[1].title}
           description={customers[1].description}
           images={customers[1].images}
           slug={customers[1].slug}
+          client={client}
         />
-        <Blogs />
+        <Blogs client={client} />
         <div>
           <Stats />
-          <FAQ />
+          <FAQ client={client} />
         </div>
         <BookSession />
       </div>

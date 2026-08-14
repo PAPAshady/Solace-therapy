@@ -3,7 +3,7 @@ import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import TransitionLink from '@modules/TransitionLink/TransitionLink';
 import { FAQs } from '@/data';
 
-export default function FAQ() {
+export default function FAQ({ client }) {
   return (
     <div className="bg-[#fafafa]">
       <div className="container py-20 lg:py-30">
@@ -25,7 +25,7 @@ export default function FAQ() {
                 پاسخ سؤال خود را پیدا نکردید؟ کافی است برای ما پیام بفرستید. با دقت و شفافیت، در
                 کوتاه‌ترین زمان ممکن پاسخ شما را خواهیم داد.
               </p>
-              <TransitionLink href="/about">
+              <TransitionLink href={`/demo/${client}/about`}>
                 <PrimaryButton>درباره ما</PrimaryButton>
               </TransitionLink>
             </div>
@@ -40,7 +40,7 @@ export default function FAQ() {
               پاسخ سؤال خود را پیدا نکردید؟ کافی است برای ما پیام بفرستید. با دقت و شفافیت، در
               کوتاه‌ترین زمان ممکن پاسخ شما را خواهیم داد.
             </p>
-            <TransitionLink href="/about">
+            <TransitionLink href={`/demo/${client}/about`}>
               <PrimaryButton>درباره ما</PrimaryButton>
             </TransitionLink>
           </div>
