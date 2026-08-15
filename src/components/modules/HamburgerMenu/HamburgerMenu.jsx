@@ -50,13 +50,13 @@ export default function HamburgerMenu() {
           <ul className="flex flex-col gap-14">
             {navLinks.map((link) => (
               <li className="link" key={link.id} onClick={() => setIsOpen(false)}>
-                <TransitionLink className="text-2xl font-semibold" href={`/${client}${link.href}`}>
+                <TransitionLink className="text-2xl font-semibold" href={`/demo/${client}${link.href}`}>
                   {link.title}
                 </TransitionLink>
               </li>
             ))}
             <li className="link">
-              <TransitionLink href={`/${client}/book-session`}>
+              <TransitionLink href={`/demo/${client}/book-session`}>
                 <PrimaryButton>دریافت نوبت</PrimaryButton>
               </TransitionLink>
             </li>
