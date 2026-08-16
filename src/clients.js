@@ -90,6 +90,13 @@ const clients = {
     quote: 'مهرنوش ذبیحی، روانشناس فردی و تراپیست والدین',
     founderImg: 'https://mehrnooshzabihi.ir/wp-content/uploads/ehrnoosh-zabihi-3.jpg',
   },
+  'nastaran-barahimi': {
+    logo: 'نسترن براهیمی',
+    founder: 'نسترن براهیمی',
+    phone: '09397940041',
+    clinicName: 'کلینیک براهیمی',
+    quote : 'نسترن براهیمی، متخصص روابط بین فردی و روانشناس خانواده'
+  },
 };
 
 export default clients;
