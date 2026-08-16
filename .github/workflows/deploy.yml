@@ -20,10 +20,6 @@ jobs:
           script: |
             cd ${{ secrets.PROJECT_PATH }}
 
-            git pull
+            sudo git pull
 
-            pnpm install
-
-            pnpm build
-
-            pm2 restart solace-therapy
+            docker compose up -d --build
