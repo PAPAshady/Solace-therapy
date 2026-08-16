@@ -98,7 +98,7 @@ export default function BlogContent({ client }) {
               alt="Some alt"
               width={2048}
               height={2048}
-              src="/images/journals/journal-1.jpg"
+              src="/images/journals/journal-1.webp"
               style={{ maskImage: 'url(/images/shapes/shape-1.svg' }}
               className="aspect-square w-full mask-contain mask-center mask-no-repeat"
             />
@@ -181,7 +181,7 @@ export default function BlogContent({ client }) {
             alt="Some alt"
             width={2048}
             height={2048}
-            src="/images/journals/journal-1.jpg"
+            src="/images/journals/journal-1.webp"
             style={{ maskImage: 'url(/images/shapes/shape-1.svg' }}
             className="aspect-square w-full mask-contain mask-center mask-no-repeat"
           />
