@@ -75,13 +75,21 @@ const clients = {
     clinicName: 'مرکز مشاوره خورشید',
     quote: 'وحید سلطانیان، روان دروانگر و بنیان گذار مرکز مشاوره خورشید',
   },
-  'zeynab-afrasiyab' : {
-    logo : 'زینب افراسیاب',
-    founder : "زینب افراسیاب",
-    phone : '09364582226',
-    clinicName : 'کلینیک زینب افراسیاب',
-    quote: 'زینب افراسیاب، روان درمانگر و مشاور خانواده'
-  }
+  'zeynab-afrasiyab': {
+    logo: 'زینب افراسیاب',
+    founder: 'زینب افراسیاب',
+    phone: '09364582226',
+    clinicName: 'کلینیک زینب افراسیاب',
+    quote: 'زینب افراسیاب، روان درمانگر و مشاور خانواده',
+  },
+  'mehrnoosh-zabihi': {
+    logo: 'مهرنوش ذبیحی',
+    founder: 'مهرنوش ذبیحی',
+    phone: '09900817302',
+    clinicName: 'کلینیک مهرنوش ذبیحی',
+    quote: 'مهرنوش ذبیحی، روانشناس فردی و تراپیست والدین',
+    founderImg: 'https://mehrnooshzabihi.ir/wp-content/uploads/ehrnoosh-zabihi-3.jpg',
+  },
 };
 
 export default clients;

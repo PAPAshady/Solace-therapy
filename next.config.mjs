@@ -9,6 +9,7 @@ const nextConfig = {
       new URL('https://dbazargan.ir/**'),
       new URL('https://jananclinic.ir/**'),
       new URL('https://pouralizade.ir/**'),
+      new URL('https://mehrnooshzabihi.ir/**'),
     ],
   },
 };
