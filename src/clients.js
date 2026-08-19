@@ -118,6 +118,13 @@ const clients = {
     clinicName: 'کلینیک مهر آیین دانایی',
     quote: 'بنیان گذار مرکز مشاوره مهر آیین',
   },
+  'sara-moghdam': {
+    logo: 'سارا مقدم',
+    founder: 'سارا عزیزی مقدم',
+    phone: '۰۹۱۲۰۲۴۴۹۸۴',
+    clinicName: 'کلینیک مقدم',
+    quote: 'سارا مقدم، مشاور و روانشناس بالینی',
+  },
 };
 
 export default clients;
