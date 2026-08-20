@@ -125,6 +125,13 @@ const clients = {
     clinicName: 'کلینیک مقدم',
     quote: 'سارا مقدم، مشاور و روانشناس بالینی',
   },
+  'mostafa-najmabadi': {
+    logo: 'مصطفی نجم آبادی',
+    founder: 'مصطفی نجم آبادی',
+    phone: '09199889464',
+    clinicName: 'کلینیک نجم آبادی',
+    quote: 'مصطفی نجم آبادی، روانشناس و روان درمانگر متخصص EFT',
+  },
 };
 
 export default clients;
