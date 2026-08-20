@@ -13,6 +13,7 @@ import PrimaryButton from '@modules/PrimaryButton/PrimaryButton';
 import Checkbox from '@modules/Checkbox/Checkbox';
 import { setTheme } from '@/utils';
 import TransitionLink from '@/components/modules/TransitionLink/TransitionLink';
+import clients from '@/clients';
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
@@ -248,27 +249,51 @@ export default function Banner() {
           ref={bannerTextContainer}
           className="flex h-screen max-h-210 items-center justify-center text-white md:max-h-200"
         >
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-20 lg:pt-40 xl:gap-0!">
-            <p
+          <div
+            className={clsx(
+              'xl:gap-0!" flex flex-col gap-6 lg:flex-row lg:justify-between lg:gap-20 lg:pt-40',
+              clients[client]?.heading ? 'lg:items-center' : 'lg:items-end'
+            )}
+          >
+            <h1
               id="slogan"
-              className="font-secondary text-6xl leading-tight whitespace-pre-wrap min-[480px]:text-7xl min-[1200px]:text-8xl! min-[1440px]:text-[110px]! lg:w-[50%] lg:text-[85px]"
+              className={clsx(
+                'font-secondary text-6xl leading-tight whitespace-pre-wrap min-[480px]:text-7xl min-[1200px]:text-8xl! min-[1440px]:text-[110px]! lg:w-[50%] lg:text-[85px]',
+                clients[client]?.heading && 'space-x-3'
+              )}
             >
-              <span className="inline-block">هر </span>
-              <span className="inline-block">تغییر </span>
-              <span className="inline-block">بزرگی، </span>
-              <br className="hidden lg:block" />
-              <span className="inline-block">از </span>
-              <span className="inline-block">یک </span>
-              <span className="inline-block">قدم </span>
-              <span className="inline-block">آغاز </span>
-              <span className="inline-block">میشود.</span>
-            </p>
+              {clients[client]?.heading ? (
+                clients[client].heading.split(' ').map((word, index) => (
+                  <span className="inline-block" key={index}>
+                    {word}
+                  </span>
+                ))
+              ) : (
+                <>
+                  <span className="inline-block">هر </span>
+                  <span className="inline-block">تغییر </span>
+                  <span className="inline-block">بزرگی، </span>
+                  <br className="hidden lg:block" />
+                  <span className="inline-block">از </span>
+                  <span className="inline-block">یک </span>
+                  <span className="inline-block">قدم </span>
+                  <span className="inline-block">آغاز </span>
+                  <span className="inline-block">میشود.</span>
+                </>
+              )}
+            </h1>
             <div className="space-y-8 lg:flex lg:w-[50%] lg:max-w-107.5 lg:flex-col xl:max-w-125!">
               <p className="leading-loose" id="description">
-                در اینجا، با ارائه خدمات روان‌درمانی و مشاوره، همراه شما هستیم تا با آرامش و اطمینان
-                بیشتری با چالش‌های زندگی روبه‌رو شوید. در کنار هم، شناخت عمیق‌تری از خود به دست
-                می‌آوریم، سلامت روان را تقویت می‌کنیم و گام‌به‌گام مسیر رسیدن به تغییرات پایدار را
-                طی می‌کنیم.
+                {clients[client]?.description ? (
+                  clients[client].description
+                ) : (
+                  <>
+                    در اینجا، با ارائه خدمات روان‌درمانی و مشاوره، همراه شما هستیم تا با آرامش و
+                    اطمینان بیشتری با چالش‌های زندگی روبه‌رو شوید. در کنار هم، شناخت عمیق‌تری از خود
+                    به دست می‌آوریم، سلامت روان را تقویت می‌کنیم و گام‌به‌گام مسیر رسیدن به تغییرات
+                    پایدار را طی می‌کنیم.
+                  </>
+                )}
               </p>
               <div id="cta">
                 <TransitionLink href={`/demo/${client}/book-session`}>
