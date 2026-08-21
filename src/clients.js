@@ -190,6 +190,14 @@ const clients = {
     quote: 'بنیان گذار کلینیک مهرآیین',
     heading: 'مرکز مشاوره تخصصی مهرآیین',
   },
+  'nahid-alizadeh': {
+    logo: 'کلینیک علیزاده',
+    founder: 'ناهید علیزاده',
+    phone: '۰۹۳۰۷۶۷۲۵۵۴',
+    clinicName: 'کلینیک علیزاده',
+    quote: 'ناهید علیزاده، روانشناس بالینی',
+    heading: 'دکتر ناهید علیزاده',
+  },
 };
 
 export default clients;
