@@ -8,7 +8,7 @@ export default async function page({ params }) {
   return (
     <div className="space-y-20 lg:space-y-40">
       <BlogContent client={client} />
-      <Recommended />
+      <Recommended client={client} />
       <FAQ />
     </div>
   );

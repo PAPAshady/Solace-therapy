@@ -1,7 +1,7 @@
 import BlogCard from '@modules/BlogCard/BlogCard';
 import { blogs } from '@/data';
 
-export default function Recommended() {
+export default function Recommended({ client }) {
   return (
     <div className="container">
       <div className="space-y-8">
@@ -37,7 +37,7 @@ export default function Recommended() {
         </div>
         <div className="grid grid-cols-1 gap-10 min-[530px]:grid-cols-2 sm:gap-20 md:gap-30 lg:pb-10">
           {blogs.slice(2, 4).map((blog, index) => (
-            <BlogCard key={blog.id} index={index} {...blog} />
+            <BlogCard key={blog.id} index={index} client={client} {...blog} />
           ))}
         </div>
       </div>
