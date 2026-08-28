@@ -232,7 +232,12 @@ export default function Banner() {
               ? `/images/clients${clients[client].imagePath}`
               : '/images/banner.webp'
           }
-          className="absolute inset-0 z-1 flex h-screen w-full items-center justify-between object-cover object-top"
+          className={clsx(
+            'absolute inset-0 z-1 flex h-screen w-full items-center justify-between object-cover',
+            clients[client]?.imagePosition
+              ? `object-[${clients[client].imagePosition}]`
+              : 'object-top'
+          )}
           preload
         />
         <div id="img2" className="absolute inset-0 size-full">

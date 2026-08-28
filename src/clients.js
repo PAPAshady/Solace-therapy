@@ -215,6 +215,16 @@ const clients = {
     heading: 'سارا اکبرزاده، مشاور و درمانگر',
     imagePath: '/sara-akbarzadeh.webp',
   },
+  'ali-mirsadeghi': {
+    logo: 'علی میرصادقی',
+    founder: 'علی میرصادقی',
+    phone: '09123456789',
+    clinicName: 'کلینیک میرصادقی',
+    quote: 'علی میرصادقی، روانشناس و رواندرمانگر',
+    heading: 'علی میرصادقی، مشاور و درمانگر',
+    imagePath: '/ali-mirsadeghi.webp',
+    imagePosition: '50%_30%',
+  },
 };
 
 export default clients;
