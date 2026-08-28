@@ -225,6 +225,16 @@ const clients = {
     imagePath: '/ali-mirsadeghi.webp',
     imagePosition: '50%_30%',
   },
+  'morteza-tavakoli' : {
+    logo : 'مرتضی توکلی',
+    founder : 'مرتضی توکلی',
+    phone : '۰۹۱۲۳۴۵۶۷۸۹',
+    clinicName : 'کلینیک توکلی',
+    quote : 'مرتضی توکلی، روانشناس و رواندرمانگر',
+    heading : "مرتضی توکلی، مشاور و درمانگر",
+    imagePath: '/morteza-tevakoli.webp',
+    imagePosition: 'center',
+  } 
 };
 
 export default clients;
