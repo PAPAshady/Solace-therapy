@@ -259,7 +259,7 @@ export default function Banner() {
               id="slogan"
               className={clsx(
                 'font-secondary text-6xl leading-tight whitespace-pre-wrap min-[480px]:text-7xl min-[1200px]:text-8xl! min-[1440px]:text-[110px]! lg:w-[50%] lg:text-[85px]',
-                clients[client]?.heading && 'space-x-3'
+                clients[client]?.heading && 'space-x-6'
               )}
             >
               {clients[client]?.heading ? (

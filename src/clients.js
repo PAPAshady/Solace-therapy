@@ -198,6 +198,14 @@ const clients = {
     quote: 'ناهید علیزاده، روانشناس بالینی',
     heading: 'دکتر ناهید علیزاده',
   },
+  'marzie-mozaf': {
+    logo: 'مرضیه مضاف',
+    founder: 'مرضیه مضاف',
+    phone : "09123456789",
+    clinicName : "کلینیک مضاف",
+    quote : "مرضیه مضاف، روانشناس و طرحواره درمانگر",
+    heading : 'مرضیه مضاف، مشاور و طرحواره درمانگر'
+  },
 };
 
 export default clients;
