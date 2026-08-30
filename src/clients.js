@@ -253,6 +253,13 @@ const clients = {
     imagePath: '/morteza-jodat.webp',
     imagePosition: 'center',
   },
+  'sara-larjani': {
+    logo: 'سارا لارجانی',
+    founder: 'سارا لارجانی',
+    phone: '۰۹۳۹۰۰۷۷۲۲۹',
+    clinicName: 'کلینیک لارجانی',
+    heading: 'سارا لارجانی، روانشناس و درمانگر',
+  },
 };
 
 export default clients;
