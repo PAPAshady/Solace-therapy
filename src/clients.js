@@ -235,13 +235,14 @@ const clients = {
     imagePath: '/morteza-tevakoli.webp',
     imagePosition: 'center',
   },
-  'mohammadreza-javdani' : {
-    logo : 'محمدرضا جاودانی',
-    founder : 'محمدرضا جاودانی',
-    phone : '۰۹۱۲۳۴۵۶۷۸۹',
-    clinicName : 'کلینیک جاودانی',
-    quote : 'محمدرضا جاودانی، روانشناس و رواندرمانگر',
-    heading : "محمدرضا جاودانی،روانشناس و درمانگر",
+  'nazgol-khalili' : {
+    logo : 'نازگل خلیلی',
+    founder : 'نازگل خلیلی',
+    phone : '۰۹۹۱۷۳۴۵۱۴۴',
+    clinicName : 'کلینیک ارگال',
+    quote : 'نازگل خلیلی، روانشناس و رواندرمانگر',
+    heading : "نازگل خلیلی، روانشناس و درمانگر",
+    imagePath: '/nazgol-khalili.webp',
   }
 };
 
