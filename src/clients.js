@@ -272,11 +272,19 @@ const clients = {
   'zahra-karami': {
     logo: 'زهرا کرمی',
     founder: 'زهرا کرمی',
-    phone: '',
+    phone: '09224027921',
     clinicName: 'کلینیک کرمی',
     quote: 'زهرا کرمی، روانشناس و رواندرمانگر',
     heading: 'زهرا کرمی، مشاور و درمانگر',
     imagePath: '/zahra-karami.webp',
+  },
+  'mohammadali-shk': {
+    logo: 'محمدعلی اشکش',
+    founder: 'محمدعلی اشکش',
+    phone: '09383519361',
+    clinicName: "کلینیک اشکش",
+    quote : "محمدعلی اشکش، روانشناس بالینی",
+    heading : "محمدعلی اشکش، مشاور و درمانگر"
   },
 };
 
