@@ -234,7 +234,15 @@ const clients = {
     heading : "مرتضی توکلی، مشاور و درمانگر",
     imagePath: '/morteza-tevakoli.webp',
     imagePosition: 'center',
-  } 
+  },
+  'mohammadreza-javdani' : {
+    logo : 'محمدرضا جاودانی',
+    founder : 'محمدرضا جاودانی',
+    phone : '۰۹۱۲۳۴۵۶۷۸۹',
+    clinicName : 'کلینیک جاودانی',
+    quote : 'محمدرضا جاودانی، روانشناس و رواندرمانگر',
+    heading : "محمدرضا جاودانی،روانشناس و درمانگر",
+  }
 };
 
 export default clients;
