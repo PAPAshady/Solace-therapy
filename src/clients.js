@@ -260,6 +260,15 @@ const clients = {
     clinicName: 'کلینیک لارجانی',
     heading: 'سارا لارجانی، روانشناس و درمانگر',
   },
+  'aida-haghi': {
+    logo: 'آیدا حقی',
+    founder: 'آیدا حقی',
+    phone: '۰۹۳۳۶۰۵۵۲۳۶',
+    clinicName: 'کلینیک حقی',
+    quote: 'آیدا حقی، روانشناس و زوج درمانگر',
+    heading: 'آیدا حقی، روانشناس و درمانگر',
+    imagePath: '/aida-haghi.webp',
+  },
 };
 
 export default clients;
