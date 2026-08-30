@@ -269,6 +269,15 @@ const clients = {
     heading: 'آیدا حقی، روانشناس و درمانگر',
     imagePath: '/aida-haghi.webp',
   },
+  'zahra-karami': {
+    logo: 'زهرا کرمی',
+    founder: 'زهرا کرمی',
+    phone: '',
+    clinicName: 'کلینیک کرمی',
+    quote: 'زهرا کرمی، روانشناس و رواندرمانگر',
+    heading: 'زهرا کرمی، مشاور و درمانگر',
+    imagePath: '/zahra-karami.webp',
+  },
 };
 
 export default clients;
