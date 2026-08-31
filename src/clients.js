@@ -316,6 +316,14 @@ const clients = {
     imagePath: '/poorya-ghanbarzade.webp',
     imagePosition: 'top',
   },
+  'diba-clinic': {
+    logo: 'مرکز مشاوره دیبا',
+    founder: 'نسیم میرآخوری',
+    phone: '09129241361',
+    clinicName: 'کلینیک نسیم مهر دیبا',
+    quote: 'نسیم میرآخوری، زوج درمانگر و بنیان گذار مرکز مشاوره دیبا',
+    heading: 'مرکز مشاوره نسیم مهر دیبا',
+  },
 };
 
 export default clients;
