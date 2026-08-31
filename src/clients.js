@@ -301,10 +301,20 @@ const clients = {
     logo: 'کلینیک طلوع مهر',
     founder: 'فاضله ابراهیمی',
     phone: '۰۱۱۴۴۱۵۶۰۲۳',
-    clinicName: "طلوع مهر",
-    quote: "فاضله ابراهیمی، روانشناس و بنیان گذار کلینیک طلوع مهر",
-    heading : "مرکز مشاوره طلوع مهر",
-    imagePath : "/tolouemehr-clinic.webp"
+    clinicName: 'طلوع مهر',
+    quote: 'فاضله ابراهیمی، روانشناس و بنیان گذار کلینیک طلوع مهر',
+    heading: 'مرکز مشاوره طلوع مهر',
+    imagePath: '/tolouemehr-clinic.webp',
+  },
+  'poorya-ghanbarzade': {
+    logo: 'پوریا قنبرزاده',
+    founder: 'پوریا قنبرزاده',
+    phone: '09019810011',
+    clinicName: 'کلینیک قنبرزاده',
+    quote: 'پوریا قنبرزاده، روانشناس و درمانگر',
+    heading: 'پوریا قنبرزاده، مشاور و درمانگر',
+    imagePath: '/poorya-ghanbarzade.webp',
+    imagePosition: 'top',
   },
 };
 
