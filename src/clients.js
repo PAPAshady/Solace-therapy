@@ -297,6 +297,15 @@ const clients = {
     quote: 'آتنا ایلبگی، مشاور و درمانگر',
     heading: 'آتنا ایلبگی، مشاور و درمانگر',
   },
+  'tolouemehr-clinic': {
+    logo: 'کلینیک طلوع مهر',
+    founder: 'فاضله ابراهیمی',
+    phone: '۰۱۱۴۴۱۵۶۰۲۳',
+    clinicName: "طلوع مهر",
+    quote: "فاضله ابراهیمی، روانشناس و بنیان گذار کلینیک طلوع مهر",
+    heading : "مرکز مشاوره طلوع مهر",
+    imagePath : "/tolouemehr-clinic.webp"
+  },
 };
 
 export default clients;
