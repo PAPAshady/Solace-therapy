@@ -225,25 +225,33 @@ const clients = {
     imagePath: '/ali-mirsadeghi.webp',
     imagePosition: '50%_30%',
   },
-  'morteza-tavakoli' : {
-    logo : 'مرتضی توکلی',
-    founder : 'مرتضی توکلی',
-    phone : '۰۹۱۲۳۴۵۶۷۸۹',
-    clinicName : 'کلینیک توکلی',
-    quote : 'مرتضی توکلی، روانشناس و رواندرمانگر',
-    heading : "مرتضی توکلی، مشاور و درمانگر",
+  'morteza-tavakoli': {
+    logo: 'مرتضی توکلی',
+    founder: 'مرتضی توکلی',
+    phone: '۰۹۱۲۳۴۵۶۷۸۹',
+    clinicName: 'کلینیک توکلی',
+    quote: 'مرتضی توکلی، روانشناس و رواندرمانگر',
+    heading: 'مرتضی توکلی، مشاور و درمانگر',
     imagePath: '/morteza-tevakoli.webp',
     imagePosition: 'center',
   },
-  'nazgol-khalili' : {
-    logo : 'نازگل خلیلی',
-    founder : 'نازگل خلیلی',
-    phone : '۰۹۹۱۷۳۴۵۱۴۴',
-    clinicName : 'کلینیک ارگال',
-    quote : 'نازگل خلیلی، روانشناس و رواندرمانگر',
-    heading : "نازگل خلیلی، روانشناس و درمانگر",
+  'nazgol-khalili': {
+    logo: 'نازگل خلیلی',
+    founder: 'نازگل خلیلی',
+    phone: '۰۹۹۱۷۳۴۵۱۴۴',
+    clinicName: 'کلینیک ارگال',
+    quote: 'نازگل خلیلی، روانشناس و رواندرمانگر',
+    heading: 'نازگل خلیلی، روانشناس و درمانگر',
     imagePath: '/nazgol-khalili.webp',
-  }
+  },
+  'mohammad-jahangirzade': {
+    logo: 'محمد جهانگیرزاده',
+    founder: 'محمد جهانگیرزاده',
+    phone: '09035377542',
+    clinicName: 'کلینیک جهانگیرزاده',
+    quote: 'دکتر محمد جهانگیرزاده، روانشناس بالینی',
+    heading: 'محمد جهانگیرزاده، روانشناس و درمانگر',
+  },
 };
 
 export default clients;
